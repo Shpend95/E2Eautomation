@@ -22,9 +22,27 @@ pipeline {
       }
     }
 
+    stage('Generate Cucumber Report') {
+      steps {
+        sh 'mvn verify'
+      }
+    }
+
     stage('Archive Artifacts') {
       steps {
         archiveArtifacts artifacts: 'target/*.jar, target/**/*.html, target/**/*.json', allowEmptyArchive: true
+      }
+    }
+
+    stage('Publish Cucumber Report') {
+      steps {
+        publishHTML(target: [
+            reportName: 'Cucumber Report',
+            reportDir: 'target/cucumber-html-reports',
+            reportFiles: 'overview-features.html',
+            keepAll: true,
+            alwaysLinkToLastBuild: true
+        ])
       }
     }
   }
