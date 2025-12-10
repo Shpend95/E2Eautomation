@@ -54,7 +54,7 @@ pipeline {
       script {
         // Always publish test results and archive logs (even if build fails)
         junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
-        archiveArtifacts artifacts: 'logs/**', allowEmptyArchage: true
+        archiveArtifacts artifacts: 'logs/**', allowEmptyArchive: true
       }
     }
     success {
