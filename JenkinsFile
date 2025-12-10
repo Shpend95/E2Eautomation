@@ -1,0 +1,51 @@
+pipeline {
+  agent any
+
+  environment {
+    MAVEN_OPTS = "-Xmx1024m"
+    // If you added credentials in Jenkins, reference them by ID:
+    GIT_CREDENTIALS = credentials('github-creds')
+  }
+
+  stages {
+    stage('Checkout') {
+      steps {
+        checkout scm
+      }
+    }
+
+    stage('Build & Test') {
+      steps {
+        // run tests, generate cucumber json/html in target/
+        sh 'mvn -B clean test'
+      }
+    }
+
+    stage('Archive Artifacts') {
+      steps {
+        archiveArtifacts artifacts: 'target/*.jar, target/**/*.html, target/**/*.json', allowEmptyArchive: true
+      }
+    }
+
+    stage('Publish Reports') {
+      steps {
+        // publish cucumber/html if present (HTML Publisher plugin)
+        publishHTML(target: [
+            reportName: 'Cucumber Report',
+            reportDir: 'target/cucumber-html-reports',    // adjust to your generated folder
+            reportFiles: 'index.html',
+            keepAll: true
+        ])
+      }
+    }
+  }
+
+  post {
+    always {
+      junit 'target/surefire-reports/*.xml'              // TestNG / surefire results
+      archiveArtifacts artifacts: 'logs/**', allowEmptyArchive: true
+    }
+    success { echo 'Build passed' }
+    failure { echo 'Build failed' }
+  }
+}
