@@ -7,16 +7,21 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginSteps {
 
     public static WebDriver driver;
+    public static WebDriverWait wait;
 
         @Given("user is navigated to the website")
-        public void user_is_navigated_to_the_website() {
+        public void user_is_navigated_to_the_website() throws InterruptedException {
           driver=new ChromeDriver();
             driver.manage().window().maximize();
             driver.get("http://54.198.61.50/web/index.php/auth/login");
+            Thread.sleep(3000);
+
 
         }
         @When("user enters valid username and password")
