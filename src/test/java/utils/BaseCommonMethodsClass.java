@@ -24,5 +24,11 @@ public class BaseCommonMethodsClass extends PageInitializer {
         initializePageObject();
     }
 
+    public static void closeBrowser(){
+        if(driver!=null){
+            driver.quit();
+        }
+    }
+
 
 }

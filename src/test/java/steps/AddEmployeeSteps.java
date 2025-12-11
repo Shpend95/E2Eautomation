@@ -5,7 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+
 import utils.BaseCommonMethodsClass;
 
 public class AddEmployeeSteps extends BaseCommonMethodsClass {
@@ -48,7 +48,6 @@ public class AddEmployeeSteps extends BaseCommonMethodsClass {
     public void user_should_see_an_confirmation_message_saying(String string) {
         System.out.println("you have successfully added an employee, BRAVO !!");
 
-        driver.close();
     }
 
 }

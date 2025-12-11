@@ -9,39 +9,32 @@ pipeline {
     MAVEN_OPTS = "-Xmx1024m"  // Set Maven memory options
   }
 
-  stages {
+stages {
 
     stage('Checkout') {
       steps {
-        // Pull latest code from GitHub repository
+        // Pull latest code from GitHub
         checkout scm
       }
     }
 
-    stage('Build & Test') {
+    stage('Build, Test & Generate Reports') {
       steps {
-        // Clean previous builds, compile code, and run tests
-        sh 'mvn -B clean test'
-      }
-    }
-
-    stage('Generate Cucumber Report') {
-      steps {
-        // Run Maven verify to generate Cucumber JSON files
-        sh 'mvn verify'
+        // Run clean, compile, test, and generate reports in ONE command
+        sh 'mvn clean verify'
       }
     }
 
     stage('Archive Artifacts') {
       steps {
-        // Save build artifacts (JAR files, HTML reports, JSON files)
+        // Save build artifacts
         archiveArtifacts artifacts: 'target/*.jar, target/**/*.html, target/**/*.json', allowEmptyArchive: true
       }
     }
 
     stage('Publish Cucumber Report') {
       steps {
-        // Publish interactive Cucumber report using Cucumber Reports plugin
+        // Publish interactive Cucumber report
         cucumber buildStatus: 'SUCCESS',
                  fileIncludePattern: '**/*.json',
                  jsonReportDirectory: 'target'
@@ -52,17 +45,15 @@ pipeline {
   post {
     always {
       script {
-        // Always publish test results and archive logs (even if build fails)
+        // Always publish test results
         junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
         archiveArtifacts artifacts: 'logs/**', allowEmptyArchive: true
       }
     }
     success {
-      // Print message when build succeeds
       echo 'Build passed'
     }
     failure {
-      // Print message when build fails
       echo 'Build failed'
     }
   }
