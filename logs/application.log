@@ -1,0 +1,4 @@
+2025-12-10 21:37:53,429 [main] INFO  utils.Log - Opening the website
+2025-12-10 21:37:57,961 [main] INFO  utils.Log - Website opened successfully
+2025-12-10 21:38:01,443 [main] INFO  utils.Log - entering credentials
+2025-12-10 21:38:03,344 [main] INFO  utils.Log - Login successful

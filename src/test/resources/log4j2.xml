@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration>
-    <Appenders>
-        <!-- Console -->
-        <Console name="Console" target="SYSTEM_OUT">
-            <PatternLayout pattern="%d [%t] %-5level %logger{36} - %msg%n"/>
-        </Console>
+<Appenders>  <!-- WHERE logs go -->
 
-        <!-- File -->
-        <File name="File" fileName="logs/application.log">
-            <PatternLayout pattern="%d [%t] %-5level %logger{36} - %msg%n"/>
-        </File>
-    </Appenders>
+    <!-- Console - prints logs to terminal/console -->
+    <Console name="Console" target="SYSTEM_OUT">
+        <!-- Pattern: timestamp [thread] LEVEL ClassName - message -->
+        <PatternLayout pattern="%d [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
 
-    <Loggers>
-        <Root level="info">
-            <AppenderRef ref="Console"/>
-            <AppenderRef ref="File"/>
-        </Root>
-    </Loggers>
+    <!-- File - saves logs to logs/application.log file -->
+    <File name="File" fileName="logs/application.log">
+        <PatternLayout pattern="%d [%t] %-5level %logger{36} - %msg%n"/>
+    </File>
+</Appenders>
+
+<Loggers>  <!-- WHAT logs to capture -->
+    <!-- Root = default logger for all classes -->
+    <!-- level="info" = capture INFO, WARN, ERROR, FATAL (not DEBUG) -->
+    <Root level="info">
+        <AppenderRef ref="Console"/>  <!-- Send to console -->
+        <AppenderRef ref="File"/>     <!-- Send to file -->
+    </Root>
+</Loggers>
 </Configuration>

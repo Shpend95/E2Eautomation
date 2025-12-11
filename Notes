@@ -1,0 +1,24 @@
+1. JENKINS PLUGINS (Why?):
+
+Pipeline → Enables pipeline jobs (CI/CD automation)
+Maven Integration → Runs Maven commands (build/test)
+Git → Connects Jenkins to GitHub
+Cucumber Reports → Generates modern test reports
+
+2. JENKINSFILE (What?):
+
+Script that tells Jenkins what to do
+Defines stages: Checkout → Build → Test → Report
+Lives in your GitHub repo
+
+3. PIPELINE JOB (How?):
+
+Connects Jenkins to GitHub
+Monitors repo with Poll SCM (checks for changes every min or 5min or whatever we desire)
+Reads Jenkinsfile from repo
+Runs stages automatically
+
+4. FLOW:
+Code Push → GitHub → Jenkins detects change →
+Pulls code → Runs Maven tests → Generates reports →
+Shows results in UI
