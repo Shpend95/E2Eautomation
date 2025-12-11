@@ -1,6 +1,6 @@
 Feature: Login related scenarios
 
-  @Login
+  @Login @smoke
   Scenario: Valid admin login
     Given user is navigated to the website
     When user enters valid username and password

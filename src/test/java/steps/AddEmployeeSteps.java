@@ -47,6 +47,8 @@ public class AddEmployeeSteps extends BaseCommonMethodsClass {
     @Then("user should see an confirmation message saying {string}")
     public void user_should_see_an_confirmation_message_saying(String string) {
         System.out.println("you have successfully added an employee, BRAVO !!");
+
+        driver.close();
     }
 
 }

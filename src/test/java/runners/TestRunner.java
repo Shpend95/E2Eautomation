@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         glue = "steps",
         dryRun = false,
         monochrome = false,
-        tags = "@Login",
+        tags = "@smoke",
         plugin = {"pretty", "html:target/cucumber.html", "json:target/cucumber.json"}
 
 )

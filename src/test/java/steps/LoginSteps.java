@@ -42,6 +42,7 @@ public class LoginSteps extends BaseCommonMethodsClass {
         } else {
             Log.error("Login failed - logout button not found");
         }
+        driver.close();
     }
 }
 

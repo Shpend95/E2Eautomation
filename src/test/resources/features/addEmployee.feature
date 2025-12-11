@@ -6,7 +6,7 @@ Feature: Adding employees
 
 
 
-  @addEmployee
+  @addEmployee @smoke
     Scenario: Adding an employee in HRM system
     When user clicks on PIM
     And user clicks on ADD button
