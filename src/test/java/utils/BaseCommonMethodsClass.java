@@ -16,7 +16,7 @@ public class BaseCommonMethodsClass extends PageInitializer {
     public static void launchBrowser() throws InterruptedException {
         driver = new ChromeDriver();
         Log.info("Opening the website");
-        driver.get("http://54.198.61.50/web/index.php/auth/login");
+        driver.get("http://localhost:3000/");
         Log.info("Website opened successfully");
         Thread.sleep(3000);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
