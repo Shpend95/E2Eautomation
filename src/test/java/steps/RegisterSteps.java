@@ -9,7 +9,7 @@ import utils.BaseCommonMethodsClass;
 
 public class RegisterSteps extends BaseCommonMethodsClass {
 
-    public static String patientName="Jone Bones ";
+    public static String patientName="Jones John";
 
 
     @Given("the user is on the mount sinai hospital website")
@@ -25,12 +25,12 @@ public class RegisterSteps extends BaseCommonMethodsClass {
     @When("user fills his information")
     public void user_fills_his_information() throws InterruptedException {
         registerPage.fullPatientName.sendKeys(patientName);
-        registerPage.patientEmail.sendKeys("JJBones@gmail.com");
-        registerPage.patientPhoneNumber.sendKeys("121-598-6523");
+        registerPage.patientEmail.sendKeys("JJohn@gmail.com");
+        registerPage.patientPhoneNumber.sendKeys("781-598-9832");
         registerPage.calendarBtn.click();
         Thread.sleep(2000);
         driver.findElement(By.id("patient-dob")).sendKeys("08181990");
-        registerPage.patientAddress.sendKeys("098 Bronx St,apt 4 New york, New York, 19802");
+        registerPage.patientAddress.sendKeys("540 Bronx St,apt 4 New york, New York, 19802");
     }
 
     @When("user clicks on Register Patient button")
