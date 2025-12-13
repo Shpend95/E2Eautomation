@@ -1,11 +1,9 @@
-
 services:
   selenium-hub:
     image: selenium/hub:latest
+    # only expose UI port
     ports:
-      - "4442:4442"
-      - "4443:4443"
-      - "4444:4444"
+      - "4444:4444"   # only UI
     networks:
       - dockernet
 
