@@ -37,7 +37,7 @@ public class RegisterPage extends BaseCommonMethodsClass {
 
 
     public RegisterPage() {
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver.get(),this);
     }
 
 }

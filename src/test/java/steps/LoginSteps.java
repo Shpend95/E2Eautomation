@@ -3,20 +3,15 @@ package steps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.BaseCommonMethodsClass;
 import utils.Log;
 
+import java.net.MalformedURLException;
+
 public class LoginSteps extends BaseCommonMethodsClass {
-
-    public static WebDriver driver;
-    public static WebDriverWait wait;
-
     @Given("user is navigated to the website")
-    public void user_is_navigated_to_the_website() throws InterruptedException {
+    public void user_is_navigated_to_the_website() throws Exception {
         launchBrowser();
-
     }
 
     @When("user enters valid username and password")

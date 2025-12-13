@@ -17,6 +17,11 @@ stages {
         checkout scm
       }
     }
+    stage('Start Docker Grid'){
+    steps{
+    sh 'docker-compose up -d'
+      }
+    }
 
     stage('Build, Test & Generate Reports') {
       steps {
@@ -35,6 +40,7 @@ stages {
     stage('Publish Cucumber Report') {
       steps {
         // Publish interactive Cucumber report
+
         cucumber buildStatus: 'SUCCESS',
                  fileIncludePattern: '**/*.json',
                  jsonReportDirectory: 'target'
@@ -45,6 +51,7 @@ stages {
   post {
     always {
       script {
+              sh 'docker-compose down'
         // Always publish test results
         junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
         archiveArtifacts artifacts: 'logs/**', allowEmptyArchive: true

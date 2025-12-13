@@ -5,10 +5,12 @@ import org.junit.Before;
 
 import utils.BaseCommonMethodsClass;
 
+import java.net.MalformedURLException;
+
 public class Hooks extends BaseCommonMethodsClass {
 
     @Before
-    public void start() throws InterruptedException {
+    public void start() throws Exception {
         launchBrowser();
     }
 

@@ -9,11 +9,11 @@ import utils.BaseCommonMethodsClass;
 
 public class RegisterSteps extends BaseCommonMethodsClass {
 
-    public static String patientName="Jones John";
+    public static String patientName = "Lionel Messi";
 
 
     @Given("the user is on the mount sinai hospital website")
-    public void the_user_is_on_the_mount_sinai_hospital_website() throws InterruptedException {
+    public void the_user_is_on_the_mount_sinai_hospital_website() throws Exception {
         launchBrowser();
     }
 
@@ -25,12 +25,12 @@ public class RegisterSteps extends BaseCommonMethodsClass {
     @When("user fills his information")
     public void user_fills_his_information() throws InterruptedException {
         registerPage.fullPatientName.sendKeys(patientName);
-        registerPage.patientEmail.sendKeys("JJohn@gmail.com");
-        registerPage.patientPhoneNumber.sendKeys("781-598-9832");
+        registerPage.patientEmail.sendKeys("messiGoat@gmail.com");
+        registerPage.patientPhoneNumber.sendKeys("007-700-8990");
         registerPage.calendarBtn.click();
         Thread.sleep(2000);
-        driver.findElement(By.id("patient-dob")).sendKeys("08181990");
-        registerPage.patientAddress.sendKeys("540 Bronx St,apt 4 New york, New York, 19802");
+        driver.get().findElement(By.id("patient-dob")).sendKeys("01121998");
+        registerPage.patientAddress.sendKeys("543 Argeta St,apt 8B Buenos Aires, Argentina, 908121");
     }
 
     @When("user clicks on Register Patient button")
@@ -42,11 +42,11 @@ public class RegisterSteps extends BaseCommonMethodsClass {
     public void user_should_see_a_successful_message_saying_plus_the_name_of_employee_registered(String welcome) throws InterruptedException {
         Thread.sleep(2000);
 
-        String actualMessage=registerPage.welcomeMessage.getText();
-        String expectedMessage=welcome+ ", " +patientName;
+        String actualMessage = registerPage.welcomeMessage.getText();
+        String expectedMessage = welcome + ", " + patientName;
 
-        Assert.assertEquals(actualMessage,expectedMessage);
+        Assert.assertEquals(actualMessage, expectedMessage);
 
-        }
     }
+}
 

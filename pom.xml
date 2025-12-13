@@ -99,7 +99,8 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.5.2</version>
         <configuration>
-            <testFailureIgnore>true</testFailureIgnore>
+            <parallel>methods</parallel>
+            <threadCount>2</threadCount>
             <includes>
                 <include>**/TestRunner.java</include>
             </includes>
