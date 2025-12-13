@@ -1,6 +1,6 @@
 services:
   mount-sinai-app:
-    image: openjdk:17-slim
+    image: eclipse-temurin:17-jdk
     container_name: mount-sinai-app
     working_dir: /app
     volumes:
