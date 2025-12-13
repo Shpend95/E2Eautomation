@@ -4,6 +4,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import utils.BaseCommonMethodsClass;
 
 import java.net.MalformedURLException;
@@ -13,11 +14,12 @@ public class AppointmentSteps extends BaseCommonMethodsClass {
     @Given("the user is on dashboard page")
     public void the_user_is_on_dashboard_page() throws Exception {
         launchBrowser();
+        Thread.sleep(1500);
     }
 
     @When("user clicks on  the book appointment button")
     public void user_clicks_on_the_book_appointment_button() {
-        appointmentPage.bookAppBtn.click();
+        wait.until(ExpectedConditions.elementToBeClickable(appointmentPage.bookAppBtn)).click();
     }
 
     @When("user selects patient,doctor,date,time")

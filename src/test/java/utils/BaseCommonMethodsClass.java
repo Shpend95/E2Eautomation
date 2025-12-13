@@ -10,12 +10,15 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.net.URL;
 import java.time.Duration;
 
 
 public class BaseCommonMethodsClass extends PageInitializer {
+    protected static WebDriverWait wait;
+
     public static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
     public static void launchBrowser() throws Exception {
@@ -45,6 +48,7 @@ public class BaseCommonMethodsClass extends PageInitializer {
         driver.get().get("http://host.docker.internal:3000/");
         Log.info("Website opened successfully");
         driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        wait = new WebDriverWait(driver.get(), Duration.ofSeconds(10));
         driver.get().manage().window().maximize();
         initializePageObject();
     }
