@@ -26,3 +26,5 @@ services:
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
     networks: [dockerNet2026]
 
+networks:
+  dockerNet2026:
