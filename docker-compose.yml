@@ -1,29 +1,39 @@
+version: "3.9"
+
 services:
   selenium-hub:
     image: selenium/hub:latest
     ports:
-      - "4442-4444:4442-4444"
-    networks: [dockernet]
+      - "4442:4442"
+      - "4443:4443"
+      - "4444:4444"
+    networks:
+      - dockernet
 
-  chrome:
+  chrome-node:
     image: selenium/node-chrome:latest
     shm_size: 2g
-    depends_on: [selenium-hub]
+    depends_on:
+      - selenium-hub
     environment:
       - SE_EVENT_BUS_HOST=selenium-hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-    networks: [dockernet]
+    networks:
+      - dockernet
 
-  firefox:
+  firefox-node:
     image: selenium/node-firefox:latest
     shm_size: 2g
-    depends_on: [selenium-hub]
+    depends_on:
+      - selenium-hub
     environment:
       - SE_EVENT_BUS_HOST=selenium-hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-    networks: [dockernet]
+    networks:
+      - dockernet
 
 networks:
-  dockerNet2026:
+  dockernet:
+    driver: bridge
