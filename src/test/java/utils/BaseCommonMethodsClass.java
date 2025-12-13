@@ -41,7 +41,8 @@ public class BaseCommonMethodsClass extends PageInitializer {
         }
         //driver.get().get("http://localhost:3000/"); //Mount Sinai website( APP that im testing)
         //driver.get().get("http://host.docker.internal:3000/"); //// host.docker.internal failed because Spring Boot was bound to 127.0.0.1, not 0.0.0.0```
-        driver.get().get("http://mount-sinai-app:3000/");
+       // driver.get().get("http://mount-sinai-app:3000/");
+        driver.get().get("http://host.docker.internal:3000/");
         Log.info("Website opened successfully");
         driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         driver.get().manage().window().maximize();
