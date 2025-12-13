@@ -1,4 +1,11 @@
 services:
+  mount-sinai-app:
+    build: /Users/shpendpllana/Desktop/SDET-PROJECTS/mountsinaiAPP/backend
+    container_name: mount-sinai-app
+    ports:
+      - "3000:3000"
+    networks:
+      - selenium-grid
   selenium-hub:
     image: selenium/hub:latest
     container_name: selenium-hub

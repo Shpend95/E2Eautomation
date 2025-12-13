@@ -39,9 +39,10 @@ public class BaseCommonMethodsClass extends PageInitializer {
             FirefoxOptions options = new FirefoxOptions();
             driver.set(new RemoteWebDriver(new URL("http://localhost:4444"), options));
         }
-        driver.get().get("http://localhost:3000/"); //Mount Sinai website( APP that im testing)
+        //driver.get().get("http://localhost:3000/"); //Mount Sinai website( APP that im testing)
+        //driver.get().get("http://host.docker.internal:3000/"); //// host.docker.internal failed because Spring Boot was bound to 127.0.0.1, not 0.0.0.0```
+        driver.get().get("http://mount-sinai-app:3000/");
         Log.info("Website opened successfully");
-        Thread.sleep(2000);
         driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         driver.get().manage().window().maximize();
         initializePageObject();
