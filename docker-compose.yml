@@ -1,38 +1,24 @@
 services:
   selenium-hub:
     image: selenium/hub:latest
-    container_name: new-selenium-hub-1
+    container_name: selenium-hub
     ports:
-      - "55444:4444"  # Host port 55444 → container port 4444
-    networks:
-      - new_dockernet
+      - "4444:4444"
 
   chrome-node:
     image: selenium/node-chrome:latest
-    container_name: new-chrome-node-1
-    shm_size: 2g
     depends_on:
       - selenium-hub
     environment:
       - SE_EVENT_BUS_HOST=selenium-hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-    networks:
-      - new_dockernet
 
   firefox-node:
     image: selenium/node-firefox:latest
-    container_name: new-firefox-node-1
-    shm_size: 2g
     depends_on:
       - selenium-hub
     environment:
       - SE_EVENT_BUS_HOST=selenium-hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-    networks:
-      - new_dockernet
-
-networks:
-  new_dockernet:
-    driver: bridge
