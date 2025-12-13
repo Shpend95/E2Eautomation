@@ -1,11 +1,11 @@
 services:
   mount-sinai-app:
-    image: eclipse-temurin:17-jdk
+    image: maven:3.9-eclipse-temurin-17
     container_name: mount-sinai-app
     working_dir: /app
     volumes:
       - /Users/shpendpllana/Desktop/SDET-PROJECTS/mountsinaiAPP/backend:/app
-    command: ./mvnw spring-boot:run
+    command: mvn spring-boot:run
     ports:
       - "3000:3000"
     networks:
