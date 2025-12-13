@@ -19,7 +19,7 @@ stages {
     }
     stage('Start Docker Grid'){
     steps{
-    sh 'docker-compose up -d'
+   sh '/usr/local/bin/docker-compose up -d'
       }
     }
 
@@ -51,7 +51,7 @@ stages {
   post {
     always {
       script {
-              sh 'docker-compose down'
+             sh '/usr/local/bin/docker-compose down'
         // Always publish test results
         junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
         archiveArtifacts artifacts: 'logs/**', allowEmptyArchive: true
