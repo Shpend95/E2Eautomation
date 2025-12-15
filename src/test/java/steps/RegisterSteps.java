@@ -10,8 +10,6 @@ import utils.BaseCommonMethodsClass;
 public class RegisterSteps extends BaseCommonMethodsClass {
 
     public static String patientName = "Lionel Messi";
-
-
     @Given("the user is on the mount sinai hospital website")
     public void the_user_is_on_the_mount_sinai_hospital_website() throws Exception {
         launchBrowser();
@@ -28,7 +26,7 @@ public class RegisterSteps extends BaseCommonMethodsClass {
         registerPage.patientEmail.sendKeys("messiGoat@gmail.com");
         registerPage.patientPhoneNumber.sendKeys("007-700-8990");
         registerPage.calendarBtn.click();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         driver.get().findElement(By.id("patient-dob")).sendKeys("01121998");
         registerPage.patientAddress.sendKeys("543 Argeta St,apt 8B Buenos Aires, Argentina, 908121");
     }
@@ -40,8 +38,7 @@ public class RegisterSteps extends BaseCommonMethodsClass {
 
     @Then("user should see a successful message saying {string} plus the name of employee registered")
     public void user_should_see_a_successful_message_saying_plus_the_name_of_employee_registered(String welcome) throws InterruptedException {
-        Thread.sleep(2000);
-
+        Thread.sleep(1000);
         String actualMessage = registerPage.welcomeMessage.getText();
         String expectedMessage = welcome + ", " + patientName;
 

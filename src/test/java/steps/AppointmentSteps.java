@@ -14,7 +14,7 @@ public class AppointmentSteps extends BaseCommonMethodsClass {
     @Given("the user is on dashboard page")
     public void the_user_is_on_dashboard_page() throws Exception {
         launchBrowser();
-        Thread.sleep(1500);
+
     }
 
     @When("user clicks on  the book appointment button")
@@ -29,7 +29,7 @@ public class AppointmentSteps extends BaseCommonMethodsClass {
         appointmentPage.selectDoctor.click();
         selectFromDropDown(appointmentPage.selectDoctor, "Dr. Emily Rodriguez - Pediatrics");
         appointmentPage.appointmentDate.click();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         driver.get().findElement(By.id("appointment-date")).sendKeys("12222026");
         appointmentPage.appointmentTime.click();
         Thread.sleep(1000);

@@ -3,40 +3,31 @@ package steps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.testng.Assert;
 import utils.BaseCommonMethodsClass;
-import utils.Log;
-
-import java.net.MalformedURLException;
 
 public class LoginSteps extends BaseCommonMethodsClass {
-    @Given("user is navigated to the website")
-    public void user_is_navigated_to_the_website() throws Exception {
-        launchBrowser();
+    @Given("patient is navigated to the website")
+    public void patient_is_navigated_to_the_website() throws Exception {
+       launchBrowser();
     }
-
-    @When("user enters valid username and password")
-    public void user_enters_valid_username_and_password() {
-        Log.info("Entering credentials");
-        loginPage.userName.sendKeys("hrm_user");
-        Log.debug("Username entered: hrm_user");  // Won't show (level=info in config)
-        loginPage.passWord.sendKeys("Hrm_user@123");
-
-    }
-
-    @When("user clicks on login button")
-    public void user_clicks_on_login_button() {
+    @When("patient enters valid email and password")
+    public void patient_enters_valid_email_and_password() {
         loginPage.loginBtn.click();
+        loginPage.userName.sendKeys("patient@test.com");
+        loginPage.passWord.sendKeys("Patient123");
+    }
+    @When("patient clicks on login button")
+    public void patient_clicks_on_login_button() {
+        loginPage.signBtn.click();
+    }
+    @Then("patient is successfully logged in")
+    public void patient_is_successfully_logged_in() {
+        String userLogin=loginPage.userName.getText();
+        String actualMessage=loginPage.welcomeMessage.getText();
+        String expectedMessage=actualMessage + "" +userLogin;
+        Assert.assertEquals(actualMessage,expectedMessage);
     }
 
-    @Then("user is successfully logged in")
-    public void user_is_successfully_logged_in() {
-        System.out.println("You are logged in");
-
-        if (loginPage.dashboardBtn.isDisplayed()) {
-            Log.info("Login successful");
-        } else {
-            Log.error("Login failed - logout button not found");
-        }
-    }
 }
 

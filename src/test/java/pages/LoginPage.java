@@ -7,17 +7,24 @@ import utils.BaseCommonMethodsClass;
 
 public class LoginPage extends BaseCommonMethodsClass {
 
-    @FindBy(xpath = "//input[@name='username']")
+    @FindBy(xpath = "//a[@data-testid='nav-login']")
+    public WebElement loginBtn;
+
+    @FindBy(id = "login-email")
     public WebElement userName;
 
-    @FindBy(xpath = "//input[@name='password']")
+    @FindBy(id = "login-password")
     public WebElement passWord;
 
     @FindBy(xpath = "//button[@type='submit']")
-    public WebElement loginBtn;
+    public WebElement signBtn;
 
-    @FindBy(xpath = "//a[.//span[text()='Dashboard']]")
-    public WebElement dashboardBtn;
+    @FindBy(xpath = " //p[contains(text(),'Welcome back, ')]")
+    public WebElement welcomeMessage;
+    //a[.//span[text()='Dashboard']]
+
+    @FindBy(xpath = "//input[@type='checkbox']")
+    public WebElement rememberMeBtn;
 
 
     public LoginPage(){
