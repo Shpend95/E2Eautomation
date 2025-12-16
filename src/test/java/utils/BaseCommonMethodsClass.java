@@ -65,8 +65,9 @@ public class BaseCommonMethodsClass extends PageInitializer {
             // Local machine
             driver.get().get("http://localhost:3000/");
         } else if (environment.equalsIgnoreCase("grid")) {
-            // Selenium Grid
-            driver.get().get("http://localhost:3000/");
+            // Selenium Grid driver.get().get("http://localhost:3000/");
+            driver.get().get("http://172.31.41.234:3000/"); //EC2
+
         } else {
             throw new Exception("Unsupported environment: " + environment);
         }
