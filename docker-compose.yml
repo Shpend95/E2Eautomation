@@ -1,3 +1,4 @@
+version: '3'
 services:
   selenium-hub:
     image: selenium/hub:latest
@@ -5,6 +6,10 @@ services:
       - "4444:4444"
     networks:
       - selenium-grid
+    environment:
+      - SE_SESSION_REQUEST_TIMEOUT=300
+      - SE_SESSION_RETRY_INTERVAL=5
+      - SE_NODE_MAX_SESSIONS=1
 
   chrome-node:
     image: selenium/node-chrome:latest
@@ -14,10 +19,10 @@ services:
       - SE_EVENT_BUS_HOST=selenium-hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
+      - SE_NODE_MAX_SESSIONS=1
     networks:
       - selenium-grid
+    shm_size: '2gb'  # Important for Chrome stability
 
   firefox-node:
     image: selenium/node-firefox:latest
@@ -27,10 +32,10 @@ services:
       - SE_EVENT_BUS_HOST=selenium-hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
+      - SE_NODE_MAX_SESSIONS=1
     networks:
       - selenium-grid
+    shm_size: '2gb'
 
 networks:
   selenium-grid:

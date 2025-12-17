@@ -1,67 +1,196 @@
 pipeline {
-  agent any  // Run on any available Jenkins agent/node
+    agent any
 
-  tools {
-    maven 'Maven3'  // Use Maven tool configured in Jenkins
-  }
-
-  environment {
-    MAVEN_OPTS = "-Xmx1024m"  // Set Maven memory options
-  }
-
-stages {
-
-    stage('Checkout') {
-      steps {
-        // Pull latest code from GitHub
-        checkout scm
-      }
-    }
-    stage('Start Docker Grid'){
-    steps{
-   sh '/usr/local/bin/docker-compose up -d'
-      }
-    }
-
-    stage('Build, Test & Generate Reports') {
-      steps {
-        // Run clean, compile, test, and generate reports in ONE command
-        sh 'mvn clean verify'
-      }
+    parameters {
+        choice(
+            name: 'EXECUTION_ENV',
+            choices: ['local', 'grid'],
+            description: 'Execution environment: local (single browser) or grid (Docker Selenium Grid)'
+        )
+        choice(
+            name: 'BROWSER',
+            choices: ['chrome', 'firefox', 'edge'],
+            description: 'Browser for test execution'
+        )
+        choice(
+            name: 'APP_ENV',
+            choices: ['ec2', 'localhost'],
+            description: 'Application environment to test against'
+        )
+        string(
+            name: 'EC2_IP',
+            defaultValue: '98.91.239.123',
+            description: 'EC2 instance IP address (update when instance restarts)'
+        )
     }
 
-    stage('Archive Artifacts') {
-      steps {
-        // Save build artifacts
-        archiveArtifacts artifacts: 'target/*.jar, target/**/*.html, target/**/*.json', allowEmptyArchive: true
-      }
+    tools {
+        maven 'Maven3' // Must match the name configured in Jenkins Global Tool Configuration
     }
 
-    stage('Publish Cucumber Report') {
-      steps {
-        // Publish interactive Cucumber report
+    environment {
+        // Maven memory options
+        MAVEN_OPTS = '-Xmx1024m'
 
-        cucumber buildStatus: 'SUCCESS',
-                 fileIncludePattern: '**/*.json',
-                 jsonReportDirectory: 'target'
-      }
-    }
-  }
+        // Selenium Grid URL - only used when EXECUTION_ENV = 'grid'
+        SELENIUM_HUB = 'http://localhost:4444/wd/hub'
 
-  post {
-    always {
-      script {
-             sh '/usr/local/bin/docker-compose down'
-        // Always publish test results
-        junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
-        archiveArtifacts artifacts: 'logs/**', allowEmptyArchive: true
-      }
+        // Application URL - dynamically set based on APP_ENV parameter
+        APP_URL = "${params.APP_ENV == 'ec2' ? "http://${params.EC2_IP}:3000" : 'http://localhost:3000'}"
     }
-    success {
-      echo 'Build passed'
+
+    stages {
+        stage('Checkout') {
+            steps {
+                echo "Checking out code from repository..."
+                checkout scm
+            }
+        }
+
+        stage('Pre-Build Info') {
+            steps {
+                script {
+                    echo "=========================================="
+                    echo "EXECUTION CONFIGURATION"
+                    echo "=========================================="
+                    echo "Execution Environment: ${params.EXECUTION_ENV}"
+                    echo "Browser: ${params.BROWSER}"
+                    echo "Application Environment: ${params.APP_ENV}"
+                    echo "Application URL: ${APP_URL}"
+                    if (params.EXECUTION_ENV == 'grid') {
+                        echo "Selenium Grid Hub: ${SELENIUM_HUB}"
+                    }
+                    echo "=========================================="
+                }
+            }
+        }
+
+        stage('Start Docker Grid') {
+            when {
+                expression { params.EXECUTION_ENV == 'grid' }
+            }
+            steps {
+                script {
+                    echo "Starting Selenium Grid with Docker Compose..."
+                    sh '''
+                        # Navigate to docker compose location (adjust path if needed)
+                        cd ${WORKSPACE}
+
+                        # Stop any existing grid
+                        docker-compose -f docker-compose.yml down || true
+
+                        # Start fresh grid
+                        docker-compose -f docker-compose.yml up -d
+
+                        # Wait for grid to be ready
+                        echo "Waiting for Selenium Grid to initialize..."
+                        sleep 15
+
+                        # Verify grid is running
+                        curl -s http://localhost:4444/status || echo "Grid might not be fully ready"
+                    '''
+                }
+            }
+        }
+
+        stage('Build & Test') {
+            steps {
+                script {
+                    echo "Running Maven clean verify with test execution..."
+                    sh """
+                        mvn clean verify \
+                        -Denvironment=${params.EXECUTION_ENV} \
+                        -Dbrowser=${params.BROWSER} \
+                        -DappUrl=${APP_URL} \
+                        -DseleniumHub=${SELENIUM_HUB}
+                    """
+                }
+            }
+        }
+
+        stage('Generate Reports') {
+            steps {
+                script {
+                    echo "Generating Cucumber reports..."
+                    // Cucumber reports are generated during verify phase
+                    // Archive them for Jenkins
+                }
+            }
+        }
+
+        stage('Archive Artifacts') {
+            steps {
+                echo "Archiving test reports and logs..."
+
+                // Archive Cucumber HTML reports
+                publishHTML([
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: 'target/cucumber-reports',
+                    reportFiles: 'cucumber.html',
+                    reportName: 'Cucumber HTML Report'
+                ])
+
+                // Archive advanced Maven-Cucumber reports
+                publishHTML([
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: 'target/cucumber-html-reports',
+                    reportFiles: 'overview-features.html',
+                    reportName: 'Cucumber Maven Report'
+                ])
+
+                // Archive JUnit XML for Jenkins test results
+                junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
+
+                // Archive logs
+                archiveArtifacts artifacts: '**/logs/**/*.log', allowEmptyArchive: true
+            }
+        }
+
+        stage('Cleanup Docker Grid') {
+            when {
+                expression { params.EXECUTION_ENV == 'grid' }
+            }
+            steps {
+                script {
+                    echo "Stopping Docker Grid..."
+                    sh '''
+                        cd ${WORKSPACE}
+                        docker-compose -f docker-compose.yml down
+                    '''
+                }
+            }
+        }
     }
-    failure {
-      echo 'Build failed'
+
+    post {
+        always {
+            echo "Pipeline execution completed"
+
+            // Always publish test results
+            junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
+
+            // Archive artifacts even on failure
+            archiveArtifacts artifacts: '**/logs/**/*.log, **/target/cucumber-reports/**/*',
+                           allowEmptyArchive: true
+        }
+
+        success {
+            echo '✅ Build and tests PASSED!'
+        }
+
+        failure {
+            echo '❌ Build or tests FAILED!'
+            // In real-world, send Slack/email notifications here
+        }
+
+        cleanup {
+            echo "Cleaning up workspace..."
+            // Optional: clean workspace after build
+            // cleanWs()
+        }
     }
-  }
 }

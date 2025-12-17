@@ -28,6 +28,6 @@ public class LoginPage extends BaseCommonMethodsClass {
 
 
     public LoginPage(){
-        PageFactory.initElements(driver.get(),this);
+        PageFactory.initElements(driver,this);
     }
 }

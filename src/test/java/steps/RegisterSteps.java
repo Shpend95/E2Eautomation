@@ -27,7 +27,7 @@ public class RegisterSteps extends BaseCommonMethodsClass {
         registerPage.patientPhoneNumber.sendKeys("007-700-8990");
         registerPage.calendarBtn.click();
         Thread.sleep(1000);
-        driver.get().findElement(By.id("patient-dob")).sendKeys("01121998");
+        driver.findElement(By.id("patient-dob")).sendKeys("01121998");
         registerPage.patientAddress.sendKeys("543 Argeta St,apt 8B Buenos Aires, Argentina, 908121");
     }
 

@@ -33,6 +33,6 @@ public class AppointmentPage extends BaseCommonMethodsClass {
     public WebElement appointmentSuccessfully;
 
     public AppointmentPage(){
-        PageFactory.initElements(driver.get(),this);
+        PageFactory.initElements(driver,this);
     }
 }

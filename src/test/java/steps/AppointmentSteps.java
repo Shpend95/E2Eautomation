@@ -7,8 +7,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import utils.BaseCommonMethodsClass;
 
-import java.net.MalformedURLException;
-
 public class AppointmentSteps extends BaseCommonMethodsClass {
 
     @Given("the user is on dashboard page")
@@ -30,10 +28,11 @@ public class AppointmentSteps extends BaseCommonMethodsClass {
         selectFromDropDown(appointmentPage.selectDoctor, "Dr. Emily Rodriguez - Pediatrics");
         appointmentPage.appointmentDate.click();
         Thread.sleep(1000);
-        driver.get().findElement(By.id("appointment-date")).sendKeys("12222026");
+        driver.findElement(By.id("appointment-date")).sendKeys("12222026");
+        //driver.get().findElement(By.id("appointment-date")).sendKeys("12222026"); get is used when using threadlocal driver
         appointmentPage.appointmentTime.click();
         Thread.sleep(1000);
-        driver.get().findElement(By.id("appointment-time")).sendKeys("1145PM");
+        driver.findElement(By.id("appointment-time")).sendKeys("1145PM");
 
     }
 
