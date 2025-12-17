@@ -96,3 +96,11 @@
 2025-12-15 12:52:05,333 [main] INFO  utils.Log - Website opened successfully
 2025-12-15 13:03:00,895 [main] INFO  utils.Log - Website opened successfully
 2025-12-15 13:03:54,357 [main] INFO  utils.Log - Website opened successfully
+2025-12-17 15:24:48,533 [main] INFO  utils.Log - =================================================
+2025-12-17 15:24:48,536 [main] INFO  utils.Log - Browser Configuration:
+2025-12-17 15:24:48,536 [main] INFO  utils.Log - Browser: chrome
+2025-12-17 15:24:48,536 [main] INFO  utils.Log - Environment: local
+2025-12-17 15:24:48,537 [main] INFO  utils.Log - App URL: http://3.86.71.8:3000/
+2025-12-17 15:24:48,537 [main] INFO  utils.Log - =================================================
+2025-12-17 15:25:02,651 [main] INFO  utils.Log - Navigating to: http://3.86.71.8:3000/
+2025-12-17 15:25:03,434 [main] INFO  utils.Log - Browser launched successfully!

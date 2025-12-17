@@ -55,14 +55,14 @@ public class BaseCommonMethodsClass extends PageInitializer {
                 if (environment.equalsIgnoreCase("grid")) {
                     // Remote Chrome via Selenium Grid
                     ChromeOptions chromeOptions = new ChromeOptions();
-                    chromeOptions.addArguments("--headless"); // Run headless on cloud
+                    chromeOptions.addArguments("--headless"); // Run headless
                     chromeOptions.addArguments("--no-sandbox");
                     chromeOptions.addArguments("--disable-dev-shm-usage");
                     driver = new RemoteWebDriver(new URL(seleniumHub), chromeOptions);
                 } else {
                     // Local ChromeDriver (works for single-thread or ThreadLocal for parallel)
                     ChromeOptions chromeOptions = new ChromeOptions();
-                    // chromeOptions.addArguments("--headless"); // Optional for local
+                     chromeOptions.addArguments("--headless"); // Required for EC2
                     driver = new ChromeDriver(chromeOptions);
                 }
                 break;
