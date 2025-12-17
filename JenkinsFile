@@ -127,7 +127,7 @@ pipeline {
                     allowMissing: false,
                     alwaysLinkToLastBuild: true,
                     keepAll: true,
-                    reportDir: 'target/cucumber-reports',
+                    reportDir: 'target/cucumber-html-reports',
                     reportFiles: 'cucumber.html',
                     reportName: 'Cucumber HTML Report'
                 ])
