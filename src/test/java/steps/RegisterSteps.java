@@ -9,7 +9,7 @@ import utils.BaseCommonMethodsClass;
 
 public class RegisterSteps extends BaseCommonMethodsClass {
 
-    public static String patientName = "Lionel Messi";
+    public static String patientName = "Anastasia Lopez";
     @Given("the user is on the mount sinai hospital website")
     public void the_user_is_on_the_mount_sinai_hospital_website() throws Exception {
         launchBrowser();
@@ -23,22 +23,23 @@ public class RegisterSteps extends BaseCommonMethodsClass {
     @When("user fills his information")
     public void user_fills_his_information() throws InterruptedException {
         registerPage.fullPatientName.sendKeys(patientName);
-        registerPage.patientEmail.sendKeys("messiGoat@gmail.com");
-        registerPage.patientPhoneNumber.sendKeys("007-700-8990");
+        registerPage.patientEmail.sendKeys("lopAna@gmail.com");
+        registerPage.patientPhoneNumber.sendKeys("918-711-1245");
         registerPage.calendarBtn.click();
         Thread.sleep(1000);
         driver.findElement(By.id("patient-dob")).sendKeys("01121998");
-        registerPage.patientAddress.sendKeys("543 Argeta St,apt 8B Buenos Aires, Argentina, 908121");
+        registerPage.patientAddress.sendKeys("63 Main St,apt 92 Bar Harbor, Utah, 946521");
     }
 
     @When("user clicks on Register Patient button")
-    public void user_clicks_on_register_patient_button() {
+    public void user_clicks_on_register_patient_button() throws InterruptedException {
         registerPage.registerSaveBtn.click();
+        Thread.sleep(1000);
     }
 
     @Then("user should see a successful message saying {string} plus the name of employee registered")
     public void user_should_see_a_successful_message_saying_plus_the_name_of_employee_registered(String welcome) throws InterruptedException {
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         String actualMessage = registerPage.welcomeMessage.getText();
         String expectedMessage = welcome + ", " + patientName;
 

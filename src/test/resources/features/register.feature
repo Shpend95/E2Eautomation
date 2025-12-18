@@ -1,7 +1,7 @@
 Feature: New Patients Registration
 
 
-  @REGISTER @smoke
+  @REGISTER
   Scenario: New Patient for first time
     Given the user is on the mount sinai hospital website
     When user clicks on register now button

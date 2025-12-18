@@ -23,22 +23,22 @@ public class AppointmentSteps extends BaseCommonMethodsClass {
     @When("user selects patient,doctor,date,time")
     public void user_selects_patient_doctor_date_time() throws InterruptedException {
         appointmentPage.selectPatient.click();
-        selectFromDropDown("3", appointmentPage.selectPatient);
+        selectFromDropDown("2", appointmentPage.selectPatient);
         appointmentPage.selectDoctor.click();
         selectFromDropDown(appointmentPage.selectDoctor, "Dr. Emily Rodriguez - Pediatrics");
         appointmentPage.appointmentDate.click();
         Thread.sleep(1000);
-        driver.findElement(By.id("appointment-date")).sendKeys("12222026");
+        driver.findElement(By.id("appointment-date")).sendKeys("12262026");
         //driver.get().findElement(By.id("appointment-date")).sendKeys("12222026"); get is used when using threadlocal driver
         appointmentPage.appointmentTime.click();
         Thread.sleep(1000);
-        driver.findElement(By.id("appointment-time")).sendKeys("1145PM");
+        driver.findElement(By.id("appointment-time")).sendKeys("945AM");
 
     }
 
     @When("user adds note")
     public void user_adds_note() {
-        appointmentPage.appointmentNotes.sendKeys("Blood test");
+        appointmentPage.appointmentNotes.sendKeys("Following up");
     }
 
     @When("user clicks on book appointment button")

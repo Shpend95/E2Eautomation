@@ -104,3 +104,171 @@
 2025-12-17 15:24:48,537 [main] INFO  utils.Log - =================================================
 2025-12-17 15:25:02,651 [main] INFO  utils.Log - Navigating to: http://3.86.71.8:3000/
 2025-12-17 15:25:03,434 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-17 19:37:38,300 [main] INFO  utils.Log - =================================================
+2025-12-17 19:37:38,303 [main] INFO  utils.Log - Browser Configuration:
+2025-12-17 19:37:38,304 [main] INFO  utils.Log - Browser: chrome
+2025-12-17 19:37:38,304 [main] INFO  utils.Log - Environment: local
+2025-12-17 19:37:38,304 [main] INFO  utils.Log - App URL: http://3.86.71.8:3000/
+2025-12-17 19:37:38,304 [main] INFO  utils.Log - =================================================
+2025-12-17 19:37:48,792 [main] INFO  utils.Log - Navigating to: http://3.86.71.8:3000/
+2025-12-17 19:37:49,291 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-17 19:37:52,622 [main] INFO  utils.Log - =================================================
+2025-12-17 19:37:52,623 [main] INFO  utils.Log - Browser Configuration:
+2025-12-17 19:37:52,623 [main] INFO  utils.Log - Browser: chrome
+2025-12-17 19:37:52,624 [main] INFO  utils.Log - Environment: local
+2025-12-17 19:37:52,624 [main] INFO  utils.Log - App URL: http://3.86.71.8:3000/
+2025-12-17 19:37:52,624 [main] INFO  utils.Log - =================================================
+2025-12-17 19:37:53,943 [main] INFO  utils.Log - Navigating to: http://3.86.71.8:3000/
+2025-12-17 19:37:54,384 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-17 19:37:55,112 [main] INFO  utils.Log - =================================================
+2025-12-17 19:37:55,112 [main] INFO  utils.Log - Browser Configuration:
+2025-12-17 19:37:55,112 [main] INFO  utils.Log - Browser: chrome
+2025-12-17 19:37:55,112 [main] INFO  utils.Log - Environment: local
+2025-12-17 19:37:55,112 [main] INFO  utils.Log - App URL: http://3.86.71.8:3000/
+2025-12-17 19:37:55,112 [main] INFO  utils.Log - =================================================
+2025-12-17 19:37:56,419 [main] INFO  utils.Log - Navigating to: http://3.86.71.8:3000/
+2025-12-17 19:37:57,160 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-17 19:39:06,941 [main] INFO  utils.Log - =================================================
+2025-12-17 19:39:06,943 [main] INFO  utils.Log - Browser Configuration:
+2025-12-17 19:39:06,944 [main] INFO  utils.Log - Browser: chrome
+2025-12-17 19:39:06,944 [main] INFO  utils.Log - Environment: local
+2025-12-17 19:39:06,944 [main] INFO  utils.Log - App URL: http://3.86.71.8:3000/
+2025-12-17 19:39:06,944 [main] INFO  utils.Log - =================================================
+2025-12-17 19:39:09,682 [main] INFO  utils.Log - Navigating to: http://3.86.71.8:3000/
+2025-12-17 19:39:10,181 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-17 19:39:13,954 [main] INFO  utils.Log - =================================================
+2025-12-17 19:39:13,955 [main] INFO  utils.Log - Browser Configuration:
+2025-12-17 19:39:13,955 [main] INFO  utils.Log - Browser: chrome
+2025-12-17 19:39:13,955 [main] INFO  utils.Log - Environment: local
+2025-12-17 19:39:13,956 [main] INFO  utils.Log - App URL: http://3.86.71.8:3000/
+2025-12-17 19:39:13,956 [main] INFO  utils.Log - =================================================
+2025-12-17 19:39:16,172 [main] INFO  utils.Log - Navigating to: http://3.86.71.8:3000/
+2025-12-17 19:39:16,672 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-17 19:39:17,504 [main] INFO  utils.Log - =================================================
+2025-12-17 19:39:17,504 [main] INFO  utils.Log - Browser Configuration:
+2025-12-17 19:39:17,504 [main] INFO  utils.Log - Browser: chrome
+2025-12-17 19:39:17,504 [main] INFO  utils.Log - Environment: local
+2025-12-17 19:39:17,505 [main] INFO  utils.Log - App URL: http://3.86.71.8:3000/
+2025-12-17 19:39:17,505 [main] INFO  utils.Log - =================================================
+2025-12-17 19:39:19,743 [main] INFO  utils.Log - Navigating to: http://3.86.71.8:3000/
+2025-12-17 19:39:21,065 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-17 19:41:54,353 [main] INFO  utils.Log - =================================================
+2025-12-17 19:41:54,355 [main] INFO  utils.Log - Browser Configuration:
+2025-12-17 19:41:54,356 [main] INFO  utils.Log - Browser: chrome
+2025-12-17 19:41:54,356 [main] INFO  utils.Log - Environment: local
+2025-12-17 19:41:54,356 [main] INFO  utils.Log - App URL: http://3.86.71.8:3000/
+2025-12-17 19:41:54,356 [main] INFO  utils.Log - =================================================
+2025-12-17 19:41:56,960 [main] INFO  utils.Log - Navigating to: http://3.86.71.8:3000/
+2025-12-17 19:41:58,023 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-17 19:42:01,567 [main] INFO  utils.Log - =================================================
+2025-12-17 19:42:01,567 [main] INFO  utils.Log - Browser Configuration:
+2025-12-17 19:42:01,568 [main] INFO  utils.Log - Browser: chrome
+2025-12-17 19:42:01,568 [main] INFO  utils.Log - Environment: local
+2025-12-17 19:42:01,568 [main] INFO  utils.Log - App URL: http://3.86.71.8:3000/
+2025-12-17 19:42:01,569 [main] INFO  utils.Log - =================================================
+2025-12-17 19:42:03,974 [main] INFO  utils.Log - Navigating to: http://3.86.71.8:3000/
+2025-12-17 19:42:05,002 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-17 19:42:05,765 [main] INFO  utils.Log - =================================================
+2025-12-17 19:42:05,765 [main] INFO  utils.Log - Browser Configuration:
+2025-12-17 19:42:05,765 [main] INFO  utils.Log - Browser: chrome
+2025-12-17 19:42:05,765 [main] INFO  utils.Log - Environment: local
+2025-12-17 19:42:05,765 [main] INFO  utils.Log - App URL: http://3.86.71.8:3000/
+2025-12-17 19:42:05,765 [main] INFO  utils.Log - =================================================
+2025-12-17 19:42:08,435 [main] INFO  utils.Log - Navigating to: http://3.86.71.8:3000/
+2025-12-17 19:42:09,987 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-17 19:44:30,563 [main] INFO  utils.Log - =================================================
+2025-12-17 19:44:30,565 [main] INFO  utils.Log - Browser Configuration:
+2025-12-17 19:44:30,566 [main] INFO  utils.Log - Browser: chrome
+2025-12-17 19:44:30,566 [main] INFO  utils.Log - Environment: local
+2025-12-17 19:44:30,566 [main] INFO  utils.Log - App URL: http://3.86.71.8:3000/
+2025-12-17 19:44:30,566 [main] INFO  utils.Log - =================================================
+2025-12-17 19:44:33,590 [main] INFO  utils.Log - Navigating to: http://3.86.71.8:3000/
+2025-12-17 19:44:34,962 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-17 19:44:38,456 [main] INFO  utils.Log - =================================================
+2025-12-17 19:44:38,456 [main] INFO  utils.Log - Browser Configuration:
+2025-12-17 19:44:38,456 [main] INFO  utils.Log - Browser: chrome
+2025-12-17 19:44:38,456 [main] INFO  utils.Log - Environment: local
+2025-12-17 19:44:38,456 [main] INFO  utils.Log - App URL: http://3.86.71.8:3000/
+2025-12-17 19:44:38,456 [main] INFO  utils.Log - =================================================
+2025-12-17 19:44:40,827 [main] INFO  utils.Log - Navigating to: http://3.86.71.8:3000/
+2025-12-17 19:44:41,284 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-17 19:44:42,151 [main] INFO  utils.Log - =================================================
+2025-12-17 19:44:42,151 [main] INFO  utils.Log - Browser Configuration:
+2025-12-17 19:44:42,151 [main] INFO  utils.Log - Browser: chrome
+2025-12-17 19:44:42,151 [main] INFO  utils.Log - Environment: local
+2025-12-17 19:44:42,151 [main] INFO  utils.Log - App URL: http://3.86.71.8:3000/
+2025-12-17 19:44:42,151 [main] INFO  utils.Log - =================================================
+2025-12-17 19:44:44,808 [main] INFO  utils.Log - Navigating to: http://3.86.71.8:3000/
+2025-12-17 19:44:46,318 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-17 19:45:59,087 [main] INFO  utils.Log - =================================================
+2025-12-17 19:45:59,091 [main] INFO  utils.Log - Browser Configuration:
+2025-12-17 19:45:59,091 [main] INFO  utils.Log - Browser: chrome
+2025-12-17 19:45:59,092 [main] INFO  utils.Log - Environment: local
+2025-12-17 19:45:59,092 [main] INFO  utils.Log - App URL: http://3.86.71.8:3000/
+2025-12-17 19:45:59,092 [main] INFO  utils.Log - =================================================
+2025-12-17 19:46:02,175 [main] INFO  utils.Log - Navigating to: http://3.86.71.8:3000/
+2025-12-17 19:46:03,457 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-17 19:46:07,149 [main] INFO  utils.Log - =================================================
+2025-12-17 19:46:07,149 [main] INFO  utils.Log - Browser Configuration:
+2025-12-17 19:46:07,150 [main] INFO  utils.Log - Browser: chrome
+2025-12-17 19:46:07,150 [main] INFO  utils.Log - Environment: local
+2025-12-17 19:46:07,150 [main] INFO  utils.Log - App URL: http://3.86.71.8:3000/
+2025-12-17 19:46:07,151 [main] INFO  utils.Log - =================================================
+2025-12-17 19:46:09,738 [main] INFO  utils.Log - Navigating to: http://3.86.71.8:3000/
+2025-12-17 19:46:10,901 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-17 19:46:11,782 [main] INFO  utils.Log - =================================================
+2025-12-17 19:46:11,782 [main] INFO  utils.Log - Browser Configuration:
+2025-12-17 19:46:11,783 [main] INFO  utils.Log - Browser: chrome
+2025-12-17 19:46:11,783 [main] INFO  utils.Log - Environment: local
+2025-12-17 19:46:11,783 [main] INFO  utils.Log - App URL: http://3.86.71.8:3000/
+2025-12-17 19:46:11,783 [main] INFO  utils.Log - =================================================
+2025-12-17 19:46:14,627 [main] INFO  utils.Log - Navigating to: http://3.86.71.8:3000/
+2025-12-17 19:46:16,015 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-17 19:47:04,557 [main] INFO  utils.Log - =================================================
+2025-12-17 19:47:04,560 [main] INFO  utils.Log - Browser Configuration:
+2025-12-17 19:47:04,560 [main] INFO  utils.Log - Browser: chrome
+2025-12-17 19:47:04,560 [main] INFO  utils.Log - Environment: local
+2025-12-17 19:47:04,561 [main] INFO  utils.Log - App URL: http://3.86.71.8:3000/
+2025-12-17 19:47:04,561 [main] INFO  utils.Log - =================================================
+2025-12-17 19:47:07,823 [main] INFO  utils.Log - Navigating to: http://3.86.71.8:3000/
+2025-12-17 19:47:08,399 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-17 19:47:11,945 [main] INFO  utils.Log - =================================================
+2025-12-17 19:47:11,946 [main] INFO  utils.Log - Browser Configuration:
+2025-12-17 19:47:11,946 [main] INFO  utils.Log - Browser: chrome
+2025-12-17 19:47:11,946 [main] INFO  utils.Log - Environment: local
+2025-12-17 19:47:11,947 [main] INFO  utils.Log - App URL: http://3.86.71.8:3000/
+2025-12-17 19:47:11,947 [main] INFO  utils.Log - =================================================
+2025-12-17 19:47:14,127 [main] INFO  utils.Log - Navigating to: http://3.86.71.8:3000/
+2025-12-17 19:47:15,119 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-17 19:47:52,778 [main] INFO  utils.Log - =================================================
+2025-12-17 19:47:52,780 [main] INFO  utils.Log - Browser Configuration:
+2025-12-17 19:47:52,781 [main] INFO  utils.Log - Browser: chrome
+2025-12-17 19:47:52,781 [main] INFO  utils.Log - Environment: grid
+2025-12-17 19:47:52,781 [main] INFO  utils.Log - App URL: http://3.86.71.8:3000/
+2025-12-17 19:47:52,781 [main] INFO  utils.Log - Selenium Hub: http://localhost:4444/wd/hub
+2025-12-17 19:47:52,781 [main] INFO  utils.Log - =================================================
+2025-12-17 19:47:53,414 [main] INFO  utils.Log - =================================================
+2025-12-17 19:47:53,414 [main] INFO  utils.Log - Browser Configuration:
+2025-12-17 19:47:53,414 [main] INFO  utils.Log - Browser: chrome
+2025-12-17 19:47:53,414 [main] INFO  utils.Log - Environment: grid
+2025-12-17 19:47:53,415 [main] INFO  utils.Log - App URL: http://3.86.71.8:3000/
+2025-12-17 19:47:53,415 [main] INFO  utils.Log - Selenium Hub: http://localhost:4444/wd/hub
+2025-12-17 19:47:53,415 [main] INFO  utils.Log - =================================================
+2025-12-17 19:50:50,822 [main] INFO  utils.Log - =================================================
+2025-12-17 19:50:50,825 [main] INFO  utils.Log - Browser Configuration:
+2025-12-17 19:50:50,826 [main] INFO  utils.Log - Browser: chrome
+2025-12-17 19:50:50,827 [main] INFO  utils.Log - Environment: grid
+2025-12-17 19:50:50,827 [main] INFO  utils.Log - App URL: http://3.86.71.8:3000/
+2025-12-17 19:50:50,827 [main] INFO  utils.Log - Selenium Hub: http://localhost:4444/wd/hub
+2025-12-17 19:50:50,827 [main] INFO  utils.Log - =================================================
+2025-12-17 19:50:53,051 [main] INFO  utils.Log - Navigating to: http://3.86.71.8:3000/
+2025-12-17 19:50:53,811 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-17 19:50:57,502 [main] INFO  utils.Log - =================================================
+2025-12-17 19:50:57,502 [main] INFO  utils.Log - Browser Configuration:
+2025-12-17 19:50:57,503 [main] INFO  utils.Log - Browser: chrome
+2025-12-17 19:50:57,503 [main] INFO  utils.Log - Environment: grid
+2025-12-17 19:50:57,503 [main] INFO  utils.Log - App URL: http://3.86.71.8:3000/
+2025-12-17 19:50:57,504 [main] INFO  utils.Log - Selenium Hub: http://localhost:4444/wd/hub
+2025-12-17 19:50:57,504 [main] INFO  utils.Log - =================================================
+2025-12-17 19:50:59,103 [main] INFO  utils.Log - Navigating to: http://3.86.71.8:3000/
+2025-12-17 19:50:59,837 [main] INFO  utils.Log - Browser launched successfully!

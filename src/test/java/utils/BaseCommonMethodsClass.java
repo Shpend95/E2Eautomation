@@ -18,7 +18,6 @@ import java.time.Duration;
 
 
 public class BaseCommonMethodsClass extends PageInitializer {
-
    // public static ThreadLocal<WebDriver> driver = new ThreadLocal<>(); //ThreadLocal<WebDriver> gives each test thread its own instance of WebDriver.
 
     protected static WebDriverWait wait;
@@ -26,12 +25,11 @@ public class BaseCommonMethodsClass extends PageInitializer {
 
     /**
      * Launches browser based on environment configuration passed from Jenkins/Maven
-     * Supports: local execution, Docker Grid execution
+     * Supports: local execution, Docker Grid execution ,Cloud Execution
      *
      * @throws Exception
      */
     public static void launchBrowser() throws Exception {
-
         // Read configuration from Maven system properties (passed from Jenkins)
         String browser = ConfigReader.read("browser");        // "chrome", "edge", "firefox"
         String environment = ConfigReader.read("environment"); // "local", "grid"
@@ -62,7 +60,7 @@ public class BaseCommonMethodsClass extends PageInitializer {
                 } else {
                     // Local ChromeDriver (works for single-thread or ThreadLocal for parallel)
                     ChromeOptions chromeOptions = new ChromeOptions();
-                     chromeOptions.addArguments("--headless"); // Required for EC2
+                    // chromeOptions.addArguments("--headless"); // Required for  cloud EC2
                     driver = new ChromeDriver(chromeOptions);
                 }
                 break;
