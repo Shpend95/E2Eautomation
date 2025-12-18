@@ -60,7 +60,7 @@ public class BaseCommonMethodsClass extends PageInitializer {
                 } else {
                     // Local ChromeDriver (works for single-thread or ThreadLocal for parallel)
                     ChromeOptions chromeOptions = new ChromeOptions();
-                    // chromeOptions.addArguments("--headless"); // Required for  cloud EC2
+                     chromeOptions.addArguments("--headless"); // Required for  cloud EC2 or headless locally
                     driver = new ChromeDriver(chromeOptions);
                 }
                 break;
