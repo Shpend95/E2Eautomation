@@ -77,10 +77,10 @@ pipeline {
                         cd ${WORKSPACE}
 
                         # Stop any existing grid
-                        docker-compose -f docker-compose.yml down || true
+                      docker compose -f docker-compose.yml down || true
 
                         # Start fresh grid
-                        docker-compose -f docker-compose.yml up -d
+                       docker compose -f docker-compose.yml up -d
 
                         # Wait for grid to be ready
                         echo "Waiting for Selenium Grid to initialize..."
@@ -159,7 +159,7 @@ pipeline {
                     echo "Stopping Docker Grid..."
                     sh '''
                         cd ${WORKSPACE}
-                        docker-compose -f docker-compose.yml down
+                       docker compose -f docker-compose.yml down
                     '''
                 }
             }
