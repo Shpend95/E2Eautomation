@@ -4,7 +4,7 @@ pipeline {
     parameters {
         choice(
             name: 'EXECUTION_ENV',
-            choices: ['local', 'grid'],
+            choices: ['local', 'grid', 'docker-grid'],
             description: 'Execution environment: local (single browser) or grid (Docker Selenium Grid)'
         )
         choice(
@@ -57,9 +57,9 @@ pipeline {
                     echo "Browser: ${params.BROWSER}"
                     echo "Application Environment: ${params.APP_ENV}"
                     echo "Application URL: ${APP_URL}"
-                    if (params.EXECUTION_ENV == 'grid') {
-                        echo "Selenium Grid Hub: ${SELENIUM_HUB}"
-                    }
+                   if (params.EXECUTION_ENV == 'grid' || params.EXECUTION_ENV == 'docker-grid') {
+                       echo "Selenium Grid Hub: ${SELENIUM_HUB}"
+                   }
                     echo "=========================================="
                 }
             }
@@ -67,7 +67,7 @@ pipeline {
 
         stage('Start Docker Grid') {
             when {
-                expression { params.EXECUTION_ENV == 'grid' }
+                expression { params.EXECUTION_ENV == 'docker-grid' }
             }
             steps {
                 script {

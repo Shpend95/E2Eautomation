@@ -58,7 +58,6 @@ public class BaseCommonMethodsClass extends PageInitializer {
             Log.info("Selenium Hub: " + remoteUrl);
         }
 
-
         switch (browser.toLowerCase()) {
             case "chrome":
                 if (environment.equalsIgnoreCase("local")) {

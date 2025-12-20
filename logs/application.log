@@ -507,3 +507,95 @@
 2025-12-20 12:09:18,870 [main] INFO  utils.Log - =================================================
 2025-12-20 12:09:20,781 [main] INFO  utils.Log - Navigating to: http://localhost:3000/
 2025-12-20 12:09:21,580 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 13:29:57,654 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 13:29:57,656 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 13:29:57,657 [main] INFO  utils.Log - Environment: grid
+2025-12-20 13:29:57,657 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 13:29:57,657 [main] INFO  utils.Log - Headless: true
+2025-12-20 13:29:57,658 [main] INFO  utils.Log - Selenium Hub: http://localhost:4444/wd/hub
+2025-12-20 13:31:03,369 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 13:31:03,371 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 13:31:03,372 [main] INFO  utils.Log - Environment: grid
+2025-12-20 13:31:03,372 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 13:31:03,372 [main] INFO  utils.Log - Headless: true
+2025-12-20 13:31:03,372 [main] INFO  utils.Log - Selenium Hub: http://localhost:4444/wd/hub
+2025-12-20 13:33:49,040 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 13:33:49,044 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 13:33:49,045 [main] INFO  utils.Log - Environment: grid
+2025-12-20 13:33:49,045 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 13:33:49,046 [main] INFO  utils.Log - Headless: true
+2025-12-20 13:33:49,046 [main] INFO  utils.Log - Selenium Hub: http://localhost:4444/wd/hub
+2025-12-20 13:33:51,781 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 13:33:52,201 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 13:33:55,478 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 13:33:55,479 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 13:33:55,479 [main] INFO  utils.Log - Environment: grid
+2025-12-20 13:33:55,479 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 13:33:55,479 [main] INFO  utils.Log - Headless: true
+2025-12-20 13:33:55,479 [main] INFO  utils.Log - Selenium Hub: http://localhost:4444/wd/hub
+2025-12-20 13:33:56,680 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 13:33:57,015 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 13:34:13,694 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 13:34:13,697 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 13:34:13,697 [main] INFO  utils.Log - Environment: grid
+2025-12-20 13:34:13,697 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 13:34:13,698 [main] INFO  utils.Log - Headless: true
+2025-12-20 13:34:13,698 [main] INFO  utils.Log - Selenium Hub: http://localhost:4444/wd/hub
+2025-12-20 13:34:15,394 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 13:34:15,701 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 13:34:18,924 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 13:34:18,925 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 13:34:18,925 [main] INFO  utils.Log - Environment: grid
+2025-12-20 13:34:18,925 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 13:34:18,925 [main] INFO  utils.Log - Headless: true
+2025-12-20 13:34:18,925 [main] INFO  utils.Log - Selenium Hub: http://localhost:4444/wd/hub
+2025-12-20 13:34:20,160 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 13:34:20,454 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 13:36:41,743 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 13:36:41,746 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 13:36:41,746 [main] INFO  utils.Log - Environment: grid
+2025-12-20 13:36:41,746 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 13:36:41,747 [main] INFO  utils.Log - Headless: true
+2025-12-20 13:36:41,747 [main] INFO  utils.Log - Selenium Hub: http://localhost:4444/wd/hub
+2025-12-20 13:36:45,428 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 13:36:46,104 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 13:36:49,905 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 13:36:49,906 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 13:36:49,906 [main] INFO  utils.Log - Environment: grid
+2025-12-20 13:36:49,906 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 13:36:49,906 [main] INFO  utils.Log - Headless: true
+2025-12-20 13:36:49,907 [main] INFO  utils.Log - Selenium Hub: http://localhost:4444/wd/hub
+2025-12-20 13:36:51,800 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 13:36:52,954 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 13:58:39,987 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 13:58:39,990 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 13:58:39,991 [main] INFO  utils.Log - Environment: docker-grid
+2025-12-20 13:58:39,991 [main] INFO  utils.Log - App URL: http://localhost:4444
+2025-12-20 13:58:39,991 [main] INFO  utils.Log - Headless: false
+2025-12-20 13:58:39,992 [main] INFO  utils.Log - Selenium Hub: http://localhost:4444/wd/hub
+2025-12-20 13:58:43,099 [main] INFO  utils.Log - Navigating to: http://localhost:4444
+2025-12-20 13:58:43,745 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 13:59:15,821 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 13:59:15,822 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 13:59:15,822 [main] INFO  utils.Log - Environment: docker-grid
+2025-12-20 13:59:15,822 [main] INFO  utils.Log - App URL: http://localhost:4444
+2025-12-20 13:59:15,822 [main] INFO  utils.Log - Headless: false
+2025-12-20 13:59:15,822 [main] INFO  utils.Log - Selenium Hub: http://localhost:4444/wd/hub
+2025-12-20 13:59:17,152 [main] INFO  utils.Log - Navigating to: http://localhost:4444
+2025-12-20 13:59:17,562 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 14:03:52,380 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 14:03:52,383 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 14:03:52,384 [main] INFO  utils.Log - Environment: docker-grid
+2025-12-20 14:03:52,384 [main] INFO  utils.Log - App URL: http://localhost:4444
+2025-12-20 14:03:52,385 [main] INFO  utils.Log - Headless: false
+2025-12-20 14:03:52,385 [main] INFO  utils.Log - Selenium Hub: http://localhost:4444/wd/hub
+2025-12-20 14:03:54,403 [main] INFO  utils.Log - Navigating to: http://localhost:4444
+2025-12-20 14:03:54,830 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 14:04:26,883 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 14:04:26,884 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 14:04:26,884 [main] INFO  utils.Log - Environment: docker-grid
+2025-12-20 14:04:26,884 [main] INFO  utils.Log - App URL: http://localhost:4444
+2025-12-20 14:04:26,884 [main] INFO  utils.Log - Headless: false
+2025-12-20 14:04:26,884 [main] INFO  utils.Log - Selenium Hub: http://localhost:4444/wd/hub
+2025-12-20 14:04:28,232 [main] INFO  utils.Log - Navigating to: http://localhost:4444
+2025-12-20 14:04:28,693 [main] INFO  utils.Log - Browser launched successfully!
