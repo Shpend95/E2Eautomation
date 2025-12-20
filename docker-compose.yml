@@ -24,6 +24,20 @@ services:
       - selenium-grid
     shm_size: '2gb'  # Important for Chrome stability
 
+  edge-node:
+      image: selenium/node-edge:latest
+      depends_on:
+        - selenium-hub
+      environment:
+        - SE_EVENT_BUS_HOST=selenium-hub
+        - SE_EVENT_BUS_PUBLISH_PORT=4442
+        - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+        - SE_NODE_MAX_SESSIONS=1
+      networks:
+        - selenium-grid
+      shm_size: '2gb'
+
+
   firefox-node:
     image: selenium/node-firefox:latest
     depends_on:

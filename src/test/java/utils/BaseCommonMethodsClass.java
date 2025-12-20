@@ -98,7 +98,6 @@ public class BaseCommonMethodsClass extends PageInitializer {
 
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30)); // Implicit wait
-        wait = new WebDriverWait(driver, Duration.ofSeconds(20)); // Initialize explicit wait
         Log.info("Navigating to: " + appUrl);
         driver.get(appUrl);
         wait.until(driver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete")); //Waits until the entire page is fully loaded (all HTML, CSS, JS, images)
