@@ -34,10 +34,10 @@ public class BaseCommonMethodsClass extends PageInitializer {
         // Determine URLs based on environment
         switch (environment.toLowerCase()) {
             case "local":
-                appUrl = ConfigReader.read("localUrl");
+                appUrl = ConfigReader.read("appUrl");
                 break;
             case "grid":
-                appUrl = ConfigReader.read("gridUrl");
+                appUrl = ConfigReader.read("appUrl");
                 remoteUrl = ConfigReader.read("seleniumHub");
                 break;
             case "docker-grid":
