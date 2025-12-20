@@ -18,20 +18,17 @@ import java.time.Duration;
 
 
 public class BaseCommonMethodsClass extends PageInitializer {
-    // public static ThreadLocal<WebDriver> driver = new ThreadLocal<>(); //ThreadLocal<WebDriver> gives each test thread its own instance of WebDriver.
-
     protected static WebDriverWait wait;
     protected static WebDriver driver;
 
     public static void launchBrowser() throws Exception {
-        String browser = ConfigReader.read("browser");        // "chrome", "edge", "firefox"
-        String environment = ConfigReader.read("environment"); // "local", "grid" "cloud"
+        String browser = ConfigReader.read("browser");
+        String environment = ConfigReader.read("environment");
         boolean headless = Boolean.parseBoolean(ConfigReader.read("headless"));
 
         String appUrl = null;     // Where the app is running, what im testing
         String remoteUrl = null;   //Where im testing
 
-        // Determine URLs based on environment
         switch (environment.toLowerCase()) {
             case "local":
                 appUrl = ConfigReader.read("appUrl");
@@ -52,8 +49,6 @@ public class BaseCommonMethodsClass extends PageInitializer {
                 throw new IllegalArgumentException("Invalid environment: " + environment);
         }
 
-        // Log configuration
-        Log.info("=================================================");
         Log.info("Browser Configuration:");
         Log.info("Browser: " + browser);
         Log.info("Environment: " + environment);
@@ -62,9 +57,8 @@ public class BaseCommonMethodsClass extends PageInitializer {
         if (remoteUrl != null) {
             Log.info("Selenium Hub: " + remoteUrl);
         }
-        Log.info("=================================================");
 
-        // Initialize browser
+
         switch (browser.toLowerCase()) {
             case "chrome":
                 if (environment.equalsIgnoreCase("local")) {
@@ -98,41 +92,18 @@ public class BaseCommonMethodsClass extends PageInitializer {
                 }
                 break;
 
-            case "firefox":
-                if (environment.equalsIgnoreCase("local")) {
-                    FirefoxOptions localOptions = new FirefoxOptions();
-                    if (headless) {
-                        localOptions.addArguments("--headless");
-                    }
-                    driver = new FirefoxDriver(localOptions);
-                } else {
-                    FirefoxOptions remoteOptions = new FirefoxOptions();
-                    remoteOptions.addArguments("--headless");
-                    driver = new RemoteWebDriver(new URL(remoteUrl), remoteOptions);
-                }
-                break;
-
             default:
                 throw new IllegalArgumentException("Unsupported browser: " + browser);
         }
 
-        // Common driver configuration
+
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30)); // Implicit wait
-
-        // Initialize explicit wait
-        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-
-        // Navigate to the application
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20)); // Initialize explicit wait
         Log.info("Navigating to: " + appUrl);
         driver.get(appUrl);
-
-        // Wait for page to load
-        wait.until(driver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete"));
-
-        // Initialize all page objects
-        initializePageObject(); // Your existing method
-
+        wait.until(driver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete")); //Waits until the entire page is fully loaded (all HTML, CSS, JS, images)
+        initializePageObject();
         Log.info("Browser launched successfully!");
     }
 
@@ -142,9 +113,6 @@ public class BaseCommonMethodsClass extends PageInitializer {
             Log.info("Closing browser");
         }
     }
-
-    // Other existing methods...
-
 
     public static void selectFromDropDown(WebElement element, int index) {
         Select select = new Select(element);
