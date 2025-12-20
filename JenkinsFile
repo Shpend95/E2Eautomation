@@ -75,6 +75,8 @@ pipeline {
                     sh '''
                         # Navigate to docker compose location (adjust path if needed)
                         cd ${WORKSPACE}
+                           /usr/local/bin/docker compose -f docker-compose.yml down || true
+                           /usr/local/bin/docker compose -f docker-compose.yml up -d
 
                         # Stop any existing grid
                         docker compose -f docker-compose.yml down || true
@@ -87,6 +89,7 @@ pipeline {
                         sleep 15
 
                         # Verify grid is running
+                        /usr/local/bin/docker ps
                         curl -s http://localhost:4444/status || echo "Grid might not be fully ready"
                     '''
                 }
@@ -159,7 +162,7 @@ pipeline {
                     echo "Stopping Docker Grid..."
                     sh '''
                         cd ${WORKSPACE}
-                        docker compose -f docker-compose.yml down
+                         /usr/local/bin/docker compose -f docker-compose.yml down
                     '''
                 }
             }
