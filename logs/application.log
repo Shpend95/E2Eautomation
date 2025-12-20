@@ -599,3 +599,174 @@
 2025-12-20 14:04:26,884 [main] INFO  utils.Log - Selenium Hub: http://localhost:4444/wd/hub
 2025-12-20 14:04:28,232 [main] INFO  utils.Log - Navigating to: http://localhost:4444
 2025-12-20 14:04:28,693 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 15:40:52,004 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 15:40:52,008 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 15:40:52,009 [main] INFO  utils.Log - Environment: docker-grid
+2025-12-20 15:40:52,011 [main] INFO  utils.Log - App URL: http://host.docker.internal:3000
+2025-12-20 15:40:52,012 [main] INFO  utils.Log - Headless: false
+2025-12-20 15:40:52,013 [main] INFO  utils.Log - Selenium Hub: http://localhost:4444/wd/hub
+2025-12-20 15:40:53,022 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 15:40:53,023 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 15:40:53,023 [main] INFO  utils.Log - Environment: docker-grid
+2025-12-20 15:40:53,023 [main] INFO  utils.Log - App URL: http://host.docker.internal:3000
+2025-12-20 15:40:53,023 [main] INFO  utils.Log - Headless: false
+2025-12-20 15:40:53,023 [main] INFO  utils.Log - Selenium Hub: http://localhost:4444/wd/hub
+2025-12-20 15:41:25,995 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 15:41:26,003 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 15:41:26,003 [main] INFO  utils.Log - Environment: local
+2025-12-20 15:41:26,003 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 15:41:26,004 [main] INFO  utils.Log - Headless: false
+2025-12-20 15:41:32,885 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 15:41:33,598 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 15:41:33,600 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 15:41:33,600 [main] INFO  utils.Log - Environment: local
+2025-12-20 15:41:33,600 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 15:41:33,600 [main] INFO  utils.Log - Headless: false
+2025-12-20 15:41:36,145 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 15:42:55,312 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 15:42:55,321 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 15:42:55,322 [main] INFO  utils.Log - Environment: local
+2025-12-20 15:42:55,322 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 15:42:55,323 [main] INFO  utils.Log - Headless: false
+2025-12-20 15:43:05,901 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 15:43:09,585 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 15:43:12,100 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 15:43:12,101 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 15:43:12,101 [main] INFO  utils.Log - Environment: local
+2025-12-20 15:43:12,101 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 15:43:12,101 [main] INFO  utils.Log - Headless: false
+2025-12-20 15:43:14,382 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 15:43:14,447 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 15:44:23,460 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 15:44:23,464 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 15:44:23,465 [main] INFO  utils.Log - Environment: local
+2025-12-20 15:44:23,465 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 15:44:23,466 [main] INFO  utils.Log - Headless: false
+2025-12-20 15:44:27,135 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 15:44:27,555 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 15:44:29,295 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 15:44:29,295 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 15:44:29,295 [main] INFO  utils.Log - Environment: local
+2025-12-20 15:44:29,295 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 15:44:29,295 [main] INFO  utils.Log - Headless: false
+2025-12-20 15:44:31,936 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 15:44:32,900 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 15:46:41,608 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 15:46:41,611 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 15:46:41,611 [main] INFO  utils.Log - Environment: local
+2025-12-20 15:46:41,611 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 15:46:41,612 [main] INFO  utils.Log - Headless: false
+2025-12-20 15:46:45,138 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 15:46:45,684 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 15:47:11,157 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 15:47:11,158 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 15:47:11,158 [main] INFO  utils.Log - Environment: local
+2025-12-20 15:47:11,158 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 15:47:11,158 [main] INFO  utils.Log - Headless: false
+2025-12-20 15:47:13,171 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 15:47:13,524 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 15:48:19,499 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 15:48:19,502 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 15:48:19,502 [main] INFO  utils.Log - Environment: local
+2025-12-20 15:48:19,502 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 15:48:19,502 [main] INFO  utils.Log - Headless: false
+2025-12-20 15:48:22,310 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 15:48:22,725 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 15:48:42,851 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 15:48:42,851 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 15:48:42,852 [main] INFO  utils.Log - Environment: local
+2025-12-20 15:48:42,852 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 15:48:42,852 [main] INFO  utils.Log - Headless: false
+2025-12-20 15:48:44,876 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 15:48:45,184 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 15:49:42,489 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 15:49:42,492 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 15:49:42,492 [main] INFO  utils.Log - Environment: local
+2025-12-20 15:49:42,493 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 15:49:42,493 [main] INFO  utils.Log - Headless: false
+2025-12-20 15:49:45,713 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 15:49:45,823 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 15:49:47,961 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 15:49:47,961 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 15:49:47,961 [main] INFO  utils.Log - Environment: local
+2025-12-20 15:49:47,962 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 15:49:47,962 [main] INFO  utils.Log - Headless: false
+2025-12-20 15:49:50,087 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 15:49:50,416 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 15:54:09,923 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 15:54:09,926 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 15:54:09,927 [main] INFO  utils.Log - Environment: local
+2025-12-20 15:54:09,927 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 15:54:09,927 [main] INFO  utils.Log - Headless: false
+2025-12-20 15:54:12,827 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 15:54:13,833 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 15:54:15,558 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 15:54:15,558 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 15:54:15,558 [main] INFO  utils.Log - Environment: local
+2025-12-20 15:54:15,559 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 15:54:15,559 [main] INFO  utils.Log - Headless: false
+2025-12-20 15:54:17,755 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 15:54:18,132 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 15:55:19,957 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 15:55:19,961 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 15:55:19,961 [main] INFO  utils.Log - Environment: local
+2025-12-20 15:55:19,961 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 15:55:19,962 [main] INFO  utils.Log - Headless: false
+2025-12-20 15:55:22,583 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 15:55:23,049 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 15:55:24,781 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 15:55:24,781 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 15:55:24,781 [main] INFO  utils.Log - Environment: local
+2025-12-20 15:55:24,782 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 15:55:24,782 [main] INFO  utils.Log - Headless: false
+2025-12-20 15:55:26,992 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 15:55:27,315 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 15:56:15,150 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 15:56:15,153 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 15:56:15,153 [main] INFO  utils.Log - Environment: local
+2025-12-20 15:56:15,153 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 15:56:15,154 [main] INFO  utils.Log - Headless: false
+2025-12-20 15:56:17,814 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 15:56:18,209 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 15:56:19,956 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 15:56:19,957 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 15:56:19,957 [main] INFO  utils.Log - Environment: local
+2025-12-20 15:56:19,957 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 15:56:19,957 [main] INFO  utils.Log - Headless: false
+2025-12-20 15:56:22,055 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 15:56:22,361 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 15:56:55,301 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 15:56:55,304 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 15:56:55,305 [main] INFO  utils.Log - Environment: local
+2025-12-20 15:56:55,305 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 15:56:55,306 [main] INFO  utils.Log - Headless: false
+2025-12-20 15:56:57,918 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 15:56:58,569 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 15:57:00,137 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 15:57:00,137 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 15:57:00,137 [main] INFO  utils.Log - Environment: local
+2025-12-20 15:57:00,137 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 15:57:00,138 [main] INFO  utils.Log - Headless: false
+2025-12-20 15:57:02,202 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 15:57:02,234 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 15:58:35,908 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 15:58:35,911 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 15:58:35,911 [main] INFO  utils.Log - Environment: local
+2025-12-20 15:58:35,911 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 15:58:35,912 [main] INFO  utils.Log - Headless: false
+2025-12-20 15:58:38,668 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 15:58:39,152 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 16:00:03,354 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 16:00:03,357 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 16:00:03,357 [main] INFO  utils.Log - Environment: local
+2025-12-20 16:00:03,357 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 16:00:03,357 [main] INFO  utils.Log - Headless: false
+2025-12-20 16:00:06,383 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 16:00:06,757 [main] INFO  utils.Log - Browser launched successfully!
+2025-12-20 16:00:08,876 [main] INFO  utils.Log - Browser Configuration:
+2025-12-20 16:00:08,876 [main] INFO  utils.Log - Browser: chrome
+2025-12-20 16:00:08,877 [main] INFO  utils.Log - Environment: local
+2025-12-20 16:00:08,877 [main] INFO  utils.Log - App URL: http://localhost:3000
+2025-12-20 16:00:08,877 [main] INFO  utils.Log - Headless: false
+2025-12-20 16:00:10,999 [main] INFO  utils.Log - Navigating to: http://localhost:3000
+2025-12-20 16:00:11,304 [main] INFO  utils.Log - Browser launched successfully!

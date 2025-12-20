@@ -100,7 +100,7 @@ public class BaseCommonMethodsClass extends PageInitializer {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30)); // Implicit wait
         Log.info("Navigating to: " + appUrl);
         driver.get(appUrl);
-        wait.until(driver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete")); //Waits until the entire page is fully loaded (all HTML, CSS, JS, images)
+        //wait.until(driver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete")); //Waits until the entire page is fully loaded (all HTML, CSS, JS, images)
         initializePageObject();
         Log.info("Browser launched successfully!");
     }

@@ -19,7 +19,7 @@ public class LoginPage extends BaseCommonMethodsClass {
     @FindBy(xpath = "//button[contains(text(),'Sign in')]")
     public WebElement signBtn;
 
-    @FindBy(xpath = "//span[contains(text(),'Welcome')]")
+    @FindBy(xpath = "//span[contains(text(),'Welcome,')]")
     public WebElement welcomeMessage;
     //a[.//span[text()='Dashboard']]
 

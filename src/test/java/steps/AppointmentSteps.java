@@ -13,12 +13,11 @@ public class AppointmentSteps extends BaseCommonMethodsClass {
     @Given("the user is on logged in")
     public void the_user_is_on_logged_in() throws Exception {
         launchBrowser();
-        Thread.sleep(2000);
         loginPage.userName.clear();
         loginPage.userName.sendKeys("patient1");
         loginPage.passWord.clear();
         loginPage.passWord.sendKeys("patient123");
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Sign in')]"))).click();
+        loginPage.signBtn.click();
 
 
     }
@@ -28,9 +27,9 @@ public class AppointmentSteps extends BaseCommonMethodsClass {
     }
     @When("user selects doctor,date,time")
     public void user_selects_doctor_date_time() {
-    selectFromDropDown("1", appointmentPage.selectDoctor);
+    selectFromDropDown("3", appointmentPage.selectDoctor);
     appointmentPage.appointmentDate.click();
-    appointmentPage.appointmentDate.sendKeys("12242026");
+    appointmentPage.appointmentDate.sendKeys("12292028");
     appointmentPage.appointmentTime.click();
     appointmentPage.appointmentTime.sendKeys("1200PM");
 
