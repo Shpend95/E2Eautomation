@@ -14,7 +14,7 @@ pipeline {
         )
         choice(
             name: 'APP_ENV',
-            choices: ['ec2', 'localhost'],
+           choices: ['localhost', 'ec2'],
             description: 'Application environment to test against'
         )
         string(
