@@ -73,16 +73,13 @@ pipeline {
                 script {
                     echo "Starting Selenium Grid with Docker Compose..."
                     sh '''
-                        # Navigate to docker compose location (adjust path if needed)
                         cd ${WORKSPACE}
-                           /usr/local/bin/docker compose -f docker-compose.yml down || true
-                           /usr/local/bin/docker compose -f docker-compose.yml up -d
 
                         # Stop any existing grid
-                        docker compose -f docker-compose.yml down || true
+                        /usr/local/bin/docker compose -f docker-compose.yml down || true
 
                         # Start fresh grid
-                        docker compose -f docker-compose.yml up -d
+                        /usr/local/bin/docker compose -f docker-compose.yml up -d
 
                         # Wait for grid to be ready
                         echo "Waiting for Selenium Grid to initialize..."
