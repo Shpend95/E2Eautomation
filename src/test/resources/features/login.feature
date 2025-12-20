@@ -1,6 +1,6 @@
 Feature: Role-Based Login
 
-  @PatientLogin @smoke
+  @PatientLogin @smoke @1_Login
   Scenario: Valid Patient login
     Given patient is navigated to the website
     When patient enters valid email and password

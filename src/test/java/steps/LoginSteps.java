@@ -3,6 +3,8 @@ package steps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import utils.BaseCommonMethodsClass;
 
@@ -13,13 +15,15 @@ public class LoginSteps extends BaseCommonMethodsClass {
     }
     @When("patient enters valid email and password")
     public void patient_enters_valid_email_and_password() {
-        loginPage.loginBtn.click();
-        loginPage.userName.sendKeys("patient@test.com");
-        loginPage.passWord.sendKeys("Patient123");
+        loginPage.userName.clear();
+        loginPage.userName.sendKeys("patient3");
+        loginPage.passWord.clear();
+        loginPage.passWord.sendKeys("patient123");
     }
     @When("patient clicks on login button")
     public void patient_clicks_on_login_button() {
-        loginPage.signBtn.click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Sign in')]"))).click();
+
     }
     @Then("patient is successfully logged in")
     public void patient_is_successfully_logged_in() {

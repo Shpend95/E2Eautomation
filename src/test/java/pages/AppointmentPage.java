@@ -7,26 +7,26 @@ import utils.BaseCommonMethodsClass;
 
 public class AppointmentPage extends BaseCommonMethodsClass {
 
-    @FindBy(xpath = "//*[@data-testid='home-book-appointment-btn']")
-    public WebElement bookAppBtn;
+    @FindBy(xpath = "//button[contains(text(),'Appointments')]")
+    public WebElement Appointments;
 
     @FindBy(xpath = "//select[@id='appointment-patient']")
     public WebElement selectPatient;
 
-    @FindBy(xpath = "//select[@id='appointment-doctor']")
+    @FindBy(xpath = "//select[@name='doctorId']")
     public WebElement selectDoctor;
 
-    @FindBy(xpath = "//*[@id='appointment-date']")
+    @FindBy(xpath = "//input[@name='appointmentDate']")
     public WebElement appointmentDate;
 
-    @FindBy(xpath = "//*[@id='appointment-time']")
+    @FindBy(xpath = "//input[@name='appointmentTime']")
     public WebElement appointmentTime;
 
-    @FindBy(xpath = "//*[@id='appointment-notes']")
+    @FindBy(xpath = "//input[@name='notes']")
     public WebElement appointmentNotes;
 
-    @FindBy(xpath = "//*[@id='appointment-submit-btn']")
-    public WebElement submitAppointment;
+    @FindBy(xpath = "//button[contains(text(),'Book Appointment')]")
+    public WebElement bookAppointment;
 
 
     @FindBy(xpath = "//*[@data-testid='appointment-success']")
