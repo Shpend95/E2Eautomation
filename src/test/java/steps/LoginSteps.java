@@ -12,6 +12,7 @@ public class LoginSteps extends BaseCommonMethodsClass {
     @Given("patient is navigated to the website")
     public void patient_is_navigated_to_the_website() throws Exception {
        launchBrowser();
+       Thread.sleep(2000);
     }
     @When("patient enters valid email and password")
     public void patient_enters_valid_email_and_password() {
@@ -31,6 +32,8 @@ public class LoginSteps extends BaseCommonMethodsClass {
         String actualMessage=loginPage.welcomeMessage.getText();
         String expectedMessage=actualMessage + "" +userLogin;
         Assert.assertEquals(actualMessage,expectedMessage);
+
+        driver.close();
     }
 
 }

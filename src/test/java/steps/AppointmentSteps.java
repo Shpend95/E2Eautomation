@@ -10,11 +10,10 @@ import org.testng.Assert;
 import utils.BaseCommonMethodsClass;
 
 public class AppointmentSteps extends BaseCommonMethodsClass {
-
-
     @Given("the user is on logged in")
     public void the_user_is_on_logged_in() throws Exception {
         launchBrowser();
+        Thread.sleep(2000);
         loginPage.userName.clear();
         loginPage.userName.sendKeys("patient1");
         loginPage.passWord.clear();
@@ -48,6 +47,7 @@ public class AppointmentSteps extends BaseCommonMethodsClass {
     public void user_should_see_a_successful_message_that_appointment_has_been_booked() throws InterruptedException {
 
         System.out.println("Appointment booked successfully!");
+        driver.close();
        /*
         Alert alert=driver.switchTo().alert();
         String text=alert.getText();
