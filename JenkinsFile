@@ -152,7 +152,7 @@ pipeline {
 
         stage('Cleanup Docker Grid') {
             when {
-                expression { params.EXECUTION_ENV == 'grid' }
+                expression { params.EXECUTION_ENV == 'docker-grid' }
             }
             steps {
                 script {
