@@ -3,8 +3,13 @@ package steps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import utils.BaseCommonMethodsClass;
+
+import java.time.Duration;
 
 public class LoginSteps extends BaseCommonMethodsClass {
     String username="";
@@ -18,6 +23,8 @@ public class LoginSteps extends BaseCommonMethodsClass {
     public void patient_enters_valid_email_and_password() throws InterruptedException {
         Thread.sleep(1000);
         loginPage.userName.clear();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id='username']")));
         loginPage.userName.sendKeys("patient2");
         username=loginPage.userName.getText();
         loginPage.passWord.clear();

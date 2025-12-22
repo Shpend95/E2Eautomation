@@ -6,14 +6,19 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import utils.BaseCommonMethodsClass;
+
+import java.time.Duration;
 
 public class AppointmentSteps extends BaseCommonMethodsClass {
     @Given("the user is on logged in")
     public void the_user_is_on_logged_in() throws Exception {
         launchBrowser();
         loginPage.userName.clear();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id='username']")));
         loginPage.userName.sendKeys("patient1");
         loginPage.passWord.clear();
         loginPage.passWord.sendKeys("patient123");
