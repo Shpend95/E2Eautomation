@@ -14,9 +14,16 @@ import java.time.Duration;
 public class LoginSteps extends BaseCommonMethodsClass {
     String username="";
 
+
     @Given("patient is navigated to the website")
     public void patient_is_navigated_to_the_website() throws Exception {
        launchBrowser();
+        String username = "1JohnDoe";
+        if (Character.isDigit(username.charAt(0))) {
+            System.out.println("The username can not start with a digit.");
+            System.out.println("checking branch");
+
+    }
 
     }
     @When("patient enters valid email and password")

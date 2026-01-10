@@ -22,6 +22,8 @@ public class BaseCommonMethodsClass extends PageInitializer {
     protected static WebDriver driver;
 
     public static void launchBrowser() throws Exception {
+
+        //public static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
         String browser = ConfigReader.read("browser");
         String environment = ConfigReader.read("environment");
         boolean headless = Boolean.parseBoolean(ConfigReader.read("headless"));
