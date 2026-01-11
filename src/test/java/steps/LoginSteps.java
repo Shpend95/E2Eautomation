@@ -21,7 +21,7 @@ public class LoginSteps extends BaseCommonMethodsClass {
         String username = "1JohnDoe";
         if (Character.isDigit(username.charAt(0))) {
             System.out.println("The username can not start with a digit.");
-            System.out.println("checking branch");
+            System.out.println("This line to be deleted later on");
 
     }
 

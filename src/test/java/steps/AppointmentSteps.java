@@ -32,16 +32,16 @@ public class AppointmentSteps extends BaseCommonMethodsClass {
     }
     @When("user selects doctor,date,time")
     public void user_selects_doctor_date_time() {
-    selectFromDropDown("3", appointmentPage.selectDoctor);
+    selectFromDropDown("5", appointmentPage.selectDoctor);
     appointmentPage.appointmentDate.click();
-    appointmentPage.appointmentDate.sendKeys("12292028");
+    appointmentPage.appointmentDate.sendKeys("10222028");
     appointmentPage.appointmentTime.click();
-    appointmentPage.appointmentTime.sendKeys("1200PM");
+    appointmentPage.appointmentTime.sendKeys("1130AM");
 
     }
     @When("user adds note")
     public void user_adds_note() {
-        appointmentPage.appointmentNotes.sendKeys("Blood Test Results");
+        appointmentPage.appointmentNotes.sendKeys("First Time");
     }
     @When("user clicks on book appointment button")
     public void user_clicks_on_book_appointment_button() {
