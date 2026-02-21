@@ -13,6 +13,7 @@ public class RegisterSteps extends BaseCommonMethodsClass {
     @Given("the user is on the mount sinai hospital website")
     public void the_user_is_on_the_mount_sinai_hospital_website() throws Exception {
         launchBrowser();
+
     }
 
     @When("user clicks on register now button")

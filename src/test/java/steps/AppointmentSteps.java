@@ -19,45 +19,47 @@ public class AppointmentSteps extends BaseCommonMethodsClass {
         loginPage.userName.clear();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id='username']")));
-        loginPage.userName.sendKeys("patient1");
+        loginPage.userName.sendKeys("patient91");
         loginPage.passWord.clear();
-        loginPage.passWord.sendKeys("patient123");
+        loginPage.passWord.sendKeys("123456");
         loginPage.signBtn.click();
 
 
     }
+
     @When("user clicks on appointments")
     public void user_clicks_on_appointments() {
-       appointmentPage.Appointments.click();
+        appointmentPage.Appointments.click();
     }
+
     @When("user selects doctor,date,time")
     public void user_selects_doctor_date_time() {
-    selectFromDropDown("5", appointmentPage.selectDoctor);
-    appointmentPage.appointmentDate.click();
-    appointmentPage.appointmentDate.sendKeys("10222028");
-    appointmentPage.appointmentTime.click();
-    appointmentPage.appointmentTime.sendKeys("1130AM");
+        selectFromDropDown("8", appointmentPage.selectDoctor);
+        appointmentPage.appointmentDate.click();
+        appointmentPage.appointmentDate.sendKeys("10282029");
+        appointmentPage.appointmentTime.click();
+        appointmentPage.appointmentTime.sendKeys("1100AM");
 
     }
+
     @When("user adds note")
     public void user_adds_note() {
         appointmentPage.appointmentNotes.sendKeys("First Time");
     }
+
     @When("user clicks on book appointment button")
     public void user_clicks_on_book_appointment_button() {
-       appointmentPage.bookAppointment.click();
+        appointmentPage.bookAppointment.click();
     }
+
     @Then("user should see a successful message that appointment has been booked")
     public void user_should_see_a_successful_message_that_appointment_has_been_booked() throws InterruptedException {
 
-        System.out.println("Appointment booked successfully!");
-        driver.close();
-       /*
-        Alert alert=driver.switchTo().alert();
-        String text=alert.getText();
-        Assert.assertEquals(text,"Appointment booked successfully!");
+        Alert alert = driver.switchTo().alert();
+        String text = alert.getText();
+        Assert.assertEquals(text, "Appointment booked successfully!");
 
-        */
+
     }
 
 }

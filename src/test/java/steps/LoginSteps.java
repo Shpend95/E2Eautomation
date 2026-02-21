@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import utils.BaseCommonMethodsClass;
+import utils.Log;
 
 import java.time.Duration;
 
@@ -17,13 +18,7 @@ public class LoginSteps extends BaseCommonMethodsClass {
 
     @Given("patient is navigated to the website")
     public void patient_is_navigated_to_the_website() throws Exception {
-       launchBrowser();
-        String username = "1JohnDoe";
-        if (Character.isDigit(username.charAt(0))) {
-            System.out.println("The username can not start with a digit.");
-            System.out.println("This line to be deleted later on");
-
-    }
+      launchBrowser();
 
     }
     @When("patient enters valid email and password")
@@ -32,15 +27,18 @@ public class LoginSteps extends BaseCommonMethodsClass {
         loginPage.userName.clear();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id='username']")));
-        loginPage.userName.sendKeys("patient2");
+        loginPage.userName.sendKeys("patient91");
         username=loginPage.userName.getText();
         loginPage.passWord.clear();
-        loginPage.passWord.sendKeys("patient123");
+        loginPage.passWord.sendKeys("123456");
 
     }
     @When("patient clicks on login button")
     public void patient_clicks_on_login_button() throws InterruptedException {
         loginPage.signBtn.click();
+        Log.info("logged in successfully");
+
+
 
     }
     @Then("patient is successfully logged in")
