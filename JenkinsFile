@@ -19,7 +19,7 @@ pipeline {
         )
         string(
             name: 'EC2_IP',
-            defaultValue: '3.86.71.8',
+            defaultValue: '54.197.190.7',
             description: 'EC2 instance IP address (update when instance restarts)'
         )
     }
