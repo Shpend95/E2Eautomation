@@ -39,7 +39,7 @@ public class BaseCommonMethodsClass extends PageInitializer {
                 break;
             case "cloud":
                 appUrl = ConfigReader.read("cloudAppUrl");
-                remoteUrl = ConfigReader.read("cloudSeleniumHub");
+               // remoteUrl = ConfigReader.read("cloudSeleniumHub");
                 break;
             default:
                 throw new IllegalArgumentException("Invalid environment: " + environment);
@@ -56,7 +56,8 @@ public class BaseCommonMethodsClass extends PageInitializer {
 
         switch (browser.toLowerCase()) {
             case "chrome":
-                if (environment.equalsIgnoreCase("local")) {
+               // if (environment.equalsIgnoreCase("local")) {
+                if (environment.equalsIgnoreCase("local") || environment.equalsIgnoreCase("cloud")) {
                     // LOCAL: Run Chrome on your machine
                     ChromeOptions localOptions = new ChromeOptions();
                     if (headless) {
