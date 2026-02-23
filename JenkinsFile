@@ -66,32 +66,28 @@ pipeline {
         }
 
        stage('Start Docker Grid') {
-           when {
-               expression { params.EXECUTION_ENV == 'docker-grid' }
-           }
-           steps {
-               script {
-                   echo "Starting Selenium Grid with Docker Compose..."
-                   sh '''
+                   when {
+                       expression { params.EXECUTION_ENV == 'docker-grid' }
+                   }
+                   steps {
+                       script {
+                           echo "Starting Selenium Grid..."
+                           sh '''
+                               # 1. Kill old containers
+                               docker-compose down || true
 
+                               # 2. Start new ones
+                               docker-compose up -d
 
-                       # Stop any existing grid using the correct command
-                       docker-compose -f docker-compose.yml down || true
+                               # 3. Wait
+                               sleep 15
 
-                       # Start fresh grid
-                       docker-compose -f docker-compose.yml up -d
-
-                       # Wait for grid to be ready
-                       echo "Waiting for Selenium Grid to initialize..."
-                       sleep 15
-
-                       # Verify grid is running
-                       docker ps
-                       curl -s http://localhost:4444/status || echo "Grid might not be fully ready"
-                   '''
+                               # 4. Check status
+                               curl -s http://localhost:4444/status
+                           '''
+                       }
+                   }
                }
-           }
-       }
 
         stage('Build & Test') {
             steps {
