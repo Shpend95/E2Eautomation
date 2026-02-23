@@ -19,7 +19,7 @@ pipeline {
         )
         string(
             name: 'EC2_IP',
-            defaultValue: '54.175.96.112',
+            defaultValue: '34.227.102.124',
             description: 'EC2 instance IP address (update when instance restarts)'
         )
     }
@@ -36,7 +36,7 @@ pipeline {
         SELENIUM_HUB = 'http://localhost:4444/wd/hub'
 
         // Application URL - dynamically set based on APP_ENV parameter
-        APP_URL = "${params.APP_ENV == 'ec2' ? "http://${params.EC2_IP}:3000" : 'http://localhost:3000'}"
+        APP_URL = "${params.APP_ENV == 'ec2' ? "http://${params.EC2_IP}:3000" : 'http://54.198.61.50'}"
     }
 
     stages {

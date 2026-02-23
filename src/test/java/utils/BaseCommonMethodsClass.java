@@ -56,7 +56,7 @@ public class BaseCommonMethodsClass extends PageInitializer {
 
         switch (browser.toLowerCase()) {
             case "chrome":
-                if (environment.equalsIgnoreCase("local") || environment.equalsIgnoreCase("cloud"))  {
+                if (environment.equalsIgnoreCase("local"))  {
                     // LOCAL: Run Chrome on your machine
                     ChromeOptions localOptions = new ChromeOptions();
                     if (headless) {
