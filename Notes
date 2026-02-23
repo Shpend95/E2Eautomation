@@ -6,13 +6,11 @@ Git → Connects Jenkins to GitHub
 Cucumber Reports → Generates modern test reports
 
 2. JENKINSFILE (What?):
-
 Script that tells Jenkins what to do
 Defines stages: Checkout → Build → Test → Report
-Lives in your GitHub repo
+Lives in  GitHub repo
 
 3. PIPELINE JOB (How?):
-
 Connects Jenkins to GitHub
 Monitors repo with Poll SCM (checks for changes every min or 5min or whatever we desire)
 Reads Jenkinsfile from repo

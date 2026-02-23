@@ -45,7 +45,6 @@ public class BaseCommonMethodsClass extends PageInitializer {
                 throw new IllegalArgumentException("Invalid environment: " + environment);
         }
 
-        Log.info("Browser Configuration:");
         Log.info("Browser: " + browser);
         Log.info("Environment: " + environment);
         Log.info("App URL: " + appUrl);
@@ -65,7 +64,7 @@ public class BaseCommonMethodsClass extends PageInitializer {
                     localOptions.addArguments("--disable-dev-shm-usage");
                     driver = new ChromeDriver(localOptions);
                 } else {
-                    // GRID/DOCKER-GRID/CLOUD: Run Chrome remotely
+                    // GRID/DOCKER/CLOUD: Run Chrome remotely
                     ChromeOptions remoteOptions = new ChromeOptions();
                     remoteOptions.addArguments("--headless");
                     remoteOptions.addArguments("--no-sandbox");
@@ -94,10 +93,9 @@ public class BaseCommonMethodsClass extends PageInitializer {
 
 
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20)); // Implicit wait
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         Log.info("Navigating to: " + appUrl);
         driver.get(appUrl);
-        //wait.until(driver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete")); //Waits until the entire page is fully loaded (all HTML, CSS, JS, images)
         initializePageObject();
         Log.info("Browser launched successfully!");
     }
