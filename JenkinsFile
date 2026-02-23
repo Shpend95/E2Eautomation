@@ -79,7 +79,7 @@ pipeline {
                         /usr/local/bin/docker compose -f docker-compose.yml down || true
 
                         # Start fresh grid
-                        /usr/local/bin/docker compose -f docker-compose.yml up -d
+                        sh 'docker compose -f docker-compose.yml up -d'
 
                         # Wait for grid to be ready
                         echo "Waiting for Selenium Grid to initialize..."
