@@ -145,17 +145,17 @@ pipeline {
         }
 
         stage('Cleanup Docker Grid') {
-         when {
-               expression { params.EXECUTION_ENV == 'docker-grid' }
-                   }
-            steps {
-                script {
-                    echo "Stopping Docker Grid..."
-                    sh '/usr/local/bin/docker compose down || true'
-                }
+            when {
+                expression { params.EXECUTION_ENV == 'docker-grid' }
             }
-        }
-
+            steps {
+                   script {
+                       echo "Stopping Docker Grid..."
+                       sh '/usr/local/bin/docker compose down || true'
+                   }
+               }
+           }
+    }
 
     post {
         always {
