@@ -813,3 +813,40 @@
 2026-02-20 22:09:09,457 [main] INFO  utils.Log - Navigating to: http://localhost:3000
 2026-02-20 22:09:09,775 [main] INFO  utils.Log - Browser launched successfully!
 2026-02-20 22:09:11,232 [main] INFO  utils.Log - logged in successfully
+2026-02-22 19:06:51,661 [main] INFO  utils.Log - Browser Configuration:
+2026-02-22 19:06:51,663 [main] INFO  utils.Log - Browser: chrome
+2026-02-22 19:06:51,664 [main] INFO  utils.Log - Environment: cloud
+2026-02-22 19:06:51,664 [main] INFO  utils.Log - App URL: http://54.175.96.112:3000
+2026-02-22 19:06:51,664 [main] INFO  utils.Log - Headless: true
+2026-02-22 19:06:51,665 [main] INFO  utils.Log - Selenium Hub: http://54.175.96.112:8081
+2026-02-22 19:06:57,732 [main] INFO  utils.Log - Navigating to: http://54.175.96.112:3000
+2026-02-22 19:07:27,524 [main] INFO  utils.Log - Browser Configuration:
+2026-02-22 19:07:27,526 [main] INFO  utils.Log - Browser: chrome
+2026-02-22 19:07:27,527 [main] INFO  utils.Log - Environment: cloud
+2026-02-22 19:07:27,527 [main] INFO  utils.Log - App URL: http://54.175.96.112:3000
+2026-02-22 19:07:27,527 [main] INFO  utils.Log - Headless: false
+2026-02-22 19:07:27,528 [main] INFO  utils.Log - Selenium Hub: http://54.175.96.112:8081
+2026-02-22 19:07:30,137 [main] INFO  utils.Log - Navigating to: http://54.175.96.112:3000
+2026-02-22 19:08:42,081 [main] INFO  utils.Log - Browser Configuration:
+2026-02-22 19:08:42,083 [main] INFO  utils.Log - Browser: chrome
+2026-02-22 19:08:42,084 [main] INFO  utils.Log - Environment: local
+2026-02-22 19:08:42,084 [main] INFO  utils.Log - App URL: http://54.198.61.50
+2026-02-22 19:08:42,084 [main] INFO  utils.Log - Headless: false
+2026-02-22 19:08:44,640 [main] INFO  utils.Log - Navigating to: http://54.198.61.50
+2026-02-22 19:08:50,105 [main] INFO  utils.Log - Browser launched successfully!
+2026-02-22 19:10:11,413 [main] INFO  utils.Log - Browser Configuration:
+2026-02-22 19:10:11,416 [main] INFO  utils.Log - Browser: chrome
+2026-02-22 19:10:11,416 [main] INFO  utils.Log - Environment: local
+2026-02-22 19:10:11,416 [main] INFO  utils.Log - App URL: http://54.198.61.50
+2026-02-22 19:10:11,417 [main] INFO  utils.Log - Headless: false
+2026-02-22 19:10:14,016 [main] INFO  utils.Log - Navigating to: http://54.198.61.50
+2026-02-22 19:10:20,279 [main] INFO  utils.Log - Browser launched successfully!
+2026-02-22 19:10:21,405 [main] INFO  utils.Log - logged in successfully
+2026-02-22 19:15:42,029 [main] INFO  utils.Log - Browser Configuration:
+2026-02-22 19:15:42,032 [main] INFO  utils.Log - Browser: chrome
+2026-02-22 19:15:42,032 [main] INFO  utils.Log - Environment: local
+2026-02-22 19:15:42,033 [main] INFO  utils.Log - App URL: http://54.198.61.50
+2026-02-22 19:15:42,033 [main] INFO  utils.Log - Headless: false
+2026-02-22 19:15:45,085 [main] INFO  utils.Log - Navigating to: http://54.198.61.50
+2026-02-22 19:15:50,421 [main] INFO  utils.Log - Browser launched successfully!
+2026-02-22 19:15:51,413 [main] INFO  utils.Log - logged in successfully

@@ -10,13 +10,13 @@ public class LoginPage extends BaseCommonMethodsClass {
     @FindBy(xpath = "//a[@data-testid='nav-login']")
     public WebElement loginBtn;
 
-   @FindBy(xpath ="//input[@id='username']")
+   @FindBy(xpath ="//input[@placeholder='Username']")
     public WebElement userName;
 
-    @FindBy(xpath ="//input[@id='password']")
+    @FindBy(xpath ="//input[@placeholder='Password']")
     public WebElement passWord;
 
-    @FindBy(xpath = "//button[contains(text(),'Sign in')]")
+    @FindBy(xpath = "//button[@type='submit']")
     public WebElement signBtn;
 
     @FindBy(xpath = "//span[contains(text(),'Welcome,')]")
