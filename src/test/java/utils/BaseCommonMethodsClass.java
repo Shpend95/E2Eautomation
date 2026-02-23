@@ -56,12 +56,13 @@ public class BaseCommonMethodsClass extends PageInitializer {
 
         switch (browser.toLowerCase()) {
             case "chrome":
-                if (environment.equalsIgnoreCase("local"))  {
-                    // LOCAL: Run Chrome on your machine
+                if (environment.equalsIgnoreCase("local")) {
                     ChromeOptions localOptions = new ChromeOptions();
                     if (headless) {
                         localOptions.addArguments("--headless");
                     }
+                    localOptions.addArguments("--no-sandbox");
+                    localOptions.addArguments("--disable-dev-shm-usage");
                     driver = new ChromeDriver(localOptions);
                 } else {
                     // GRID/DOCKER-GRID/CLOUD: Run Chrome remotely
