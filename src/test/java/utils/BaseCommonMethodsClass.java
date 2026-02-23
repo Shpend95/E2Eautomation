@@ -34,7 +34,7 @@ public class BaseCommonMethodsClass extends PageInitializer {
                 remoteUrl = ConfigReader.read("seleniumHub");
                 break;
             case "docker-grid":
-                appUrl = ConfigReader.read("dockerGridAppUrl");
+                appUrl = ConfigReader.read("websiteAPP");
                 remoteUrl = ConfigReader.read("dockerSeleniumHub");
                 break;
             case "cloud":
