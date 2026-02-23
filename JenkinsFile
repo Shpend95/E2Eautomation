@@ -65,33 +65,33 @@ pipeline {
             }
         }
 
-        stage('Start Docker Grid') {
-            when {
-                expression { params.EXECUTION_ENV == 'docker-grid' }
-            }
-            steps {
-                script {
-                    echo "Starting Selenium Grid with Docker Compose..."
-                    sh '''
-                        cd ${WORKSPACE}
+       stage('Start Docker Grid') {
+           when {
+               expression { params.EXECUTION_ENV == 'docker-grid' }
+           }
+           steps {
+               script {
+                   echo "Starting Selenium Grid with Docker Compose..."
+                   sh '''
 
-                        # Stop any existing grid
-                        /usr/local/bin/docker compose -f docker-compose.yml down || true
 
-                        # Start fresh grid
-                        sh 'docker compose -f docker-compose.yml up -d'
+                       # Stop any existing grid using the correct command
+                       docker-compose -f docker-compose.yml down || true
 
-                        # Wait for grid to be ready
-                        echo "Waiting for Selenium Grid to initialize..."
-                        sleep 15
+                       # Start fresh grid
+                       docker-compose -f docker-compose.yml up -d
 
-                        # Verify grid is running
-                        /usr/local/bin/docker ps
-                        curl -s http://localhost:4444/status || echo "Grid might not be fully ready"
-                    '''
-                }
-            }
-        }
+                       # Wait for grid to be ready
+                       echo "Waiting for Selenium Grid to initialize..."
+                       sleep 15
+
+                       # Verify grid is running
+                       docker ps
+                       curl -s http://localhost:4444/status || echo "Grid might not be fully ready"
+                   '''
+               }
+           }
+       }
 
         stage('Build & Test') {
             steps {
