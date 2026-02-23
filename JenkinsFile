@@ -36,7 +36,7 @@ pipeline {
         SELENIUM_HUB = 'http://localhost:4444/wd/hub'
 
         // Application URL - dynamically set based on APP_ENV parameter
-       APP_URL = "${params.APP_ENV == 'ec2' ? "http://${params.EC2_IP}" : 'http://localhost:3000'}"
+      APP_URL = "${params.APP_ENV == 'ec2' ? 'http://54.198.61.50' : 'http://localhost:3000'}"
     }
 
     stages {
