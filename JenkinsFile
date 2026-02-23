@@ -64,27 +64,27 @@ pipeline {
                 }
             }
         }
+stage('Start Docker Grid') {
+            when {
+                expression { params.EXECUTION_ENV == 'docker-grid' }
+            }
+            steps {
+                script {
+                    echo "Starting Selenium Grid..."
+                    sh '''
+                        # Full path to avoid any 'command not found' errors
+                        /usr/bin/docker-compose down || true
+                        /usr/bin/docker-compose up -d
 
-      stage('Start Docker Grid') {
-                  when {
-                      expression { params.EXECUTION_ENV == 'docker-grid' }
-                  }
-                  steps {
-                      script {
-                          echo "Starting Selenium Grid..."
-                          sh '''
-                              # Using space instead of hyphen
-                              docker compose down || true
-                              docker compose up -d
+                        echo "Waiting 15s for browsers to wake up..."
+                        sleep 15
 
-                              echo "Waiting for Grid..."
-                              sleep 15
-
-                              docker ps
-                          '''
-                      }
-                  }
-              }
+                        # Show what is running
+                        docker ps
+                    '''
+                }
+            }
+        }
 
         stage('Build & Test') {
             steps {
