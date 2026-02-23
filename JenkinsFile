@@ -65,29 +65,26 @@ pipeline {
             }
         }
 
-       stage('Start Docker Grid') {
-                   when {
-                       expression { params.EXECUTION_ENV == 'docker-grid' }
-                   }
-                   steps {
-                       script {
-                           echo "Starting Selenium Grid..."
-                           sh '''
-                               # 1. Kill old containers
-                               docker-compose down || true
+      stage('Start Docker Grid') {
+                  when {
+                      expression { params.EXECUTION_ENV == 'docker-grid' }
+                  }
+                  steps {
+                      script {
+                          echo "Starting Selenium Grid..."
+                          sh '''
+                              # Using space instead of hyphen
+                              docker compose down || true
+                              docker compose up -d
 
-                               # 2. Start new ones
-                               docker-compose up -d
+                              echo "Waiting for Grid..."
+                              sleep 15
 
-                               # 3. Wait
-                               sleep 15
-
-                               # 4. Check status
-                               curl -s http://localhost:4444/status
-                           '''
-                       }
-                   }
-               }
+                              docker ps
+                          '''
+                      }
+                  }
+              }
 
         stage('Build & Test') {
             steps {
