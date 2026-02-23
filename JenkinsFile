@@ -3,7 +3,7 @@ pipeline {
 
     parameters {
         choice(
-            name: 'EXECUTION_ENV',
+            name: 'EXECUTION_ENV', //EXECUTION_ENV is about where Chrome/browser runs, not where the website i
             choices: ['local', 'grid', 'docker-grid', 'cloud'],
             description: 'Execution environment: local (single browser) or grid (Docker Selenium Grid)'
         )
@@ -18,9 +18,9 @@ pipeline {
             description: 'Application environment to test against'
         )
         string(
-            name: 'EC2_IP',
-            defaultValue: '34.227.102.124',
-            description: 'EC2 instance IP address (update when instance restarts)'
+            name: 'HRMS_IP',
+            defaultValue: '54.198.61.50',
+            description: 'THE WEBSITE IM TESTING'
         )
     }
 
