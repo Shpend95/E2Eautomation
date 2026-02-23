@@ -74,6 +74,8 @@ pipeline {
                     echo "Starting Selenium Grid..."
                     sh '''
                         /usr/local/bin/docker compose down || true
+                        /usr/local/bin/docker stop $(/usr/local/bin/docker ps -q) || true
+
                         /usr/local/bin/docker compose up -d
 
                         echo "Waiting 15s for browsers to wake up..."
