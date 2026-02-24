@@ -160,6 +160,10 @@ pipeline {
     post {
         always {
             echo "Pipeline execution completed"
+            sh """
+                aws s3 cp target/cucumber-html-reports/ s3://my-automation-results/build-${BUILD_NUMBER}/ --recursive || true
+                aws s3 cp target/surefire-reports/ s3://my-automation-results/build-${BUILD_NUMBER}/surefire/ --recursive || true
+            """
 
             // Always publish test results
             junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
