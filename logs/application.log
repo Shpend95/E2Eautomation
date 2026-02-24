@@ -23,3 +23,17 @@
 2026-02-23 14:32:57,484 [main] INFO  utils.Log - App URL: http://54.198.61.50
 2026-02-23 14:32:57,484 [main] INFO  utils.Log - Headless: true
 2026-02-23 14:32:57,485 [main] INFO  utils.Log - Selenium Hub: http://localhost:4444
+2026-02-23 20:05:08,375 [main] INFO  utils.Log - Browser: chrome
+2026-02-23 20:05:08,378 [main] INFO  utils.Log - Environment: local
+2026-02-23 20:05:08,378 [main] INFO  utils.Log - App URL: http://54.198.61.50
+2026-02-23 20:05:08,379 [main] INFO  utils.Log - Headless: true
+2026-02-23 20:05:11,921 [main] INFO  utils.Log - Navigating to: http://54.198.61.50
+2026-02-23 20:05:16,003 [main] INFO  utils.Log - Browser launched successfully!
+2026-02-23 20:05:17,018 [main] INFO  utils.Log - logged in successfully
+2026-02-23 20:05:57,484 [main] INFO  utils.Log - Browser: chrome
+2026-02-23 20:05:57,486 [main] INFO  utils.Log - Environment: local
+2026-02-23 20:05:57,486 [main] INFO  utils.Log - App URL: http://54.198.61.50
+2026-02-23 20:05:57,487 [main] INFO  utils.Log - Headless: true
+2026-02-23 20:05:59,246 [main] INFO  utils.Log - Navigating to: http://54.198.61.50
+2026-02-23 20:06:03,310 [main] INFO  utils.Log - Browser launched successfully!
+2026-02-23 20:06:04,149 [main] INFO  utils.Log - logged in successfully

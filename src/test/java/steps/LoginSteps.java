@@ -24,7 +24,7 @@ public class LoginSteps extends BaseCommonMethodsClass {
     }
     @When("patient enters valid email and password")
     public void patient_enters_valid_email_and_password() throws InterruptedException {
-        loginPage.userName.sendKeys("hrm_user23");
+        loginPage.userName.sendKeys("hrm_user");
         username=loginPage.userName.getText();
         loginPage.passWord.clear();
         loginPage.passWord.sendKeys("Hrm_user@123");
@@ -40,12 +40,14 @@ public class LoginSteps extends BaseCommonMethodsClass {
     }
     @Then("patient is successfully logged in")
     public void patient_is_successfully_logged_in() {
-        WebElement message=driver.findElement(By.xpath("//header/div[1]/div[1]/span/h6"));
-        String actualMessage=message.getText();
-        String expectedMessage=actualMessage;
-        Assert.assertEquals(actualMessage,expectedMessage);
 
-        driver.close();
+        WebElement dashboardMessage=driver.findElement(By.xpath("//h6[text()='Dashboard']"));
+        if(dashboardMessage.isDisplayed()){
+            System.out.println("Congrats, your are logged in");
+        }
+
+
+
     }
 
 }
