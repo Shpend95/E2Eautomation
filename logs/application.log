@@ -1,0 +1,25 @@
+2026-02-23 01:36:17,082 [main] INFO  utils.Log - Browser: chrome
+2026-02-23 01:36:17,084 [main] INFO  utils.Log - Environment: docker-grid
+2026-02-23 01:36:17,084 [main] INFO  utils.Log - App URL: http://54.198.61.50
+2026-02-23 01:36:17,085 [main] INFO  utils.Log - Headless: true
+2026-02-23 01:36:17,085 [main] INFO  utils.Log - Selenium Hub: http://localhost:4444
+2026-02-23 01:36:26,610 [main] INFO  utils.Log - Browser: chrome
+2026-02-23 01:36:26,612 [main] INFO  utils.Log - Environment: docker-grid
+2026-02-23 01:36:26,613 [main] INFO  utils.Log - App URL: http://54.198.61.50
+2026-02-23 01:36:26,613 [main] INFO  utils.Log - Headless: true
+2026-02-23 01:36:26,613 [main] INFO  utils.Log - Selenium Hub: http://localhost:4444
+2026-02-23 01:36:33,814 [main] INFO  utils.Log - Browser: chrome
+2026-02-23 01:36:33,817 [main] INFO  utils.Log - Environment: docker-grid
+2026-02-23 01:36:33,817 [main] INFO  utils.Log - App URL: http://54.198.61.50
+2026-02-23 01:36:33,818 [main] INFO  utils.Log - Headless: true
+2026-02-23 01:36:33,818 [main] INFO  utils.Log - Selenium Hub: http://localhost:4444
+2026-02-23 01:36:48,002 [main] INFO  utils.Log - Browser: chrome
+2026-02-23 01:36:48,006 [main] INFO  utils.Log - Environment: docker-grid
+2026-02-23 01:36:48,006 [main] INFO  utils.Log - App URL: http://54.198.61.50
+2026-02-23 01:36:48,007 [main] INFO  utils.Log - Headless: true
+2026-02-23 01:36:48,007 [main] INFO  utils.Log - Selenium Hub: http://localhost:4444
+2026-02-23 14:32:57,480 [main] INFO  utils.Log - Browser: chrome
+2026-02-23 14:32:57,484 [main] INFO  utils.Log - Environment: docker-grid
+2026-02-23 14:32:57,484 [main] INFO  utils.Log - App URL: http://54.198.61.50
+2026-02-23 14:32:57,484 [main] INFO  utils.Log - Headless: true
+2026-02-23 14:32:57,485 [main] INFO  utils.Log - Selenium Hub: http://localhost:4444

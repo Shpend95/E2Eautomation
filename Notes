@@ -20,3 +20,15 @@ Runs stages automatically
 Code Push → GitHub → Jenkins detects change →
 Pulls code → Runs Maven tests → Generates reports →
 Shows results in UI
+
+Data Integrity:
+"I ensure data integrity by validating across all three layers — UI, API, and database.
+ After performing an action in the UI, I verify the response at the API level and confirm the data is accurately stored in the database.
+ This end-to-end validation ensures consistency throughout the application.
+
+Flaky Tests / Build Failure:
+In my framework I have a Jenkinsfile with stages for checkout, Docker setup, build & test, report generation, and cleanup.
+ Our runner class is configured with a rerun plugin that automatically captures failed scenarios and logs them into a file under the target folder —
+ this file tells us exactly which scenarios failed. Then the runner class reruns them automatically. If a test consistently fails,
+ I quarantine it to prevent it from blocking the build, then investigate and fix it by applying Selenium best practices —
+ stable locators, explicit waits, and proper error handling."

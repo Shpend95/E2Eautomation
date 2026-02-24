@@ -24,7 +24,7 @@ public class LoginSteps extends BaseCommonMethodsClass {
     }
     @When("patient enters valid email and password")
     public void patient_enters_valid_email_and_password() throws InterruptedException {
-        loginPage.userName.sendKeys("hrm_user");
+        loginPage.userName.sendKeys("hrm_user23");
         username=loginPage.userName.getText();
         loginPage.passWord.clear();
         loginPage.passWord.sendKeys("Hrm_user@123");
