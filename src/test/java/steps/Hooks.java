@@ -1,11 +1,13 @@
 package steps;
 
-import org.junit.After;
-import org.junit.Before;
 
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import utils.BaseCommonMethodsClass;
 
-import java.net.MalformedURLException;
+
+
 
 public class Hooks extends BaseCommonMethodsClass {
 
@@ -15,7 +17,15 @@ public class Hooks extends BaseCommonMethodsClass {
     }
 
     @After
-    public void end(){
+    public void end(Scenario scenario){
+        byte[] pic;
+        if(scenario.isFailed()){
+            pic=takeScreenshot("failed/"+scenario.getName());
+        }else {
+            pic=takeScreenshot("passed/"+scenario.getName());
+        }
+
+        scenario.attach(pic,"image/png",scenario.getName());
         closeBrowser();
     }
 }

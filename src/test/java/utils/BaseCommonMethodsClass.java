@@ -1,15 +1,21 @@
 package utils;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.apache.commons.io.FileUtils;
+import java.io.File;
+import java.io.IOException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 
 public class BaseCommonMethodsClass extends PageInitializer {
     protected static WebDriverWait wait;
@@ -107,8 +113,9 @@ public class BaseCommonMethodsClass extends PageInitializer {
         }
     }
 
-    public static void selectFromDropDown(WebElement element, int index) {
-        Select select = new Select(element);
+
+    public static void selectFromDropDown(WebElement element, int index){
+        Select select=new Select(element);
         select.selectByIndex(index);
     }
 
@@ -121,6 +128,55 @@ public class BaseCommonMethodsClass extends PageInitializer {
         Select select = new Select(element);
         select.selectByValue(value);
     }
+    public static void sendText(String text, WebElement element){
+        element.clear();
+        element.sendKeys(text);
+    }
+
+    public static WebDriverWait getWait(){
+        WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(20));
+        return wait;
+    }
+    public static void waitForElementToBeClickable(WebElement element){
+        getWait().until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    public static void click(WebElement element){
+        waitForElementToBeClickable(element);
+        element.click();
+    }
+
+
+    public static byte[] takeScreenshot(String fileName){
+        TakesScreenshot ts=(TakesScreenshot) driver;
+        byte[] picBytes=ts.getScreenshotAs(OutputType.BYTES); //
+        File sourceFile=ts.getScreenshotAs(OutputType.FILE);
+
+        try {
+            FileUtils.copyFile(sourceFile, new File
+                    (Constants.SCREENSHOT_FILEPATH+fileName+
+                            " "+ getTimeStamp("yyyy-MM-dd-HH-mm-ss")+".png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return picBytes;
+    }
+
+    public static String getTimeStamp(String pattern){
+        Date date=new Date();
+        SimpleDateFormat sdf=new SimpleDateFormat(pattern);
+        return sdf.format(date);
+    }
+
+    public static JavascriptExecutor getJSExecutor(){
+        JavascriptExecutor js=(JavascriptExecutor) driver;
+        return js;
+    }
+
+    public static void jsClick(WebElement element){
+        getJSExecutor().executeScript("arguments[0].click();",element);
+    }
+
 
 
 }
