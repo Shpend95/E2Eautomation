@@ -161,8 +161,8 @@ pipeline {
         always {
             echo "Pipeline execution completed"
             sh """
-                aws s3 cp target/cucumber-html-reports/ s3://my-automation-results/build-${BUILD_NUMBER}/ --recursive || true
-                aws s3 cp target/surefire-reports/ s3://my-automation-results/build-${BUILD_NUMBER}/surefire/ --recursive || true
+                aws s3 cp target/cucumber-html-reports/ s3://my-automationresults/build-${BUILD_NUMBER}/ --recursive || true
+                aws s3 cp target/surefire-reports/ s3://my-automationresults/build-${BUILD_NUMBER}/surefire/ --recursive || true
             """
 
             // Always publish test results

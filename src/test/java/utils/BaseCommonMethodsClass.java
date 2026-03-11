@@ -141,6 +141,7 @@ public class BaseCommonMethodsClass extends PageInitializer {
         getWait().until(ExpectedConditions.elementToBeClickable(element));
     }
 
+
     public static void click(WebElement element){
         waitForElementToBeClickable(element);
         element.click();
