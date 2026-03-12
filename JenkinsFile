@@ -50,7 +50,6 @@ pipeline {
         stage('Pre-Build Info') {
             steps {
                 script {
-                    echo "=========================================="
                     echo "EXECUTION CONFIGURATION"
                     echo "=========================================="
                     echo "Execution Environment: ${params.EXECUTION_ENV}"

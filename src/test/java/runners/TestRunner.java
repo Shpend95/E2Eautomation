@@ -10,9 +10,12 @@ import org.junit.runner.RunWith;
         glue = {"steps", "Hooks"},
         dryRun = false,
         monochrome = true,
-        tags ="@1_Login",  //tags = "",  // runs ALL tests ,we use "" to run in parallel
-        plugin = {"pretty","html:target/cucumber.html","json:target/cucumber.json",
-        "rerun:target/failed.txt"}
+        tags = "@1_Login",  //tags = "",  // runs ALL tests ,we use "" to run in parallel
+        plugin = {"pretty", "html:target/cucumber.html", "json:target/cucumber.json", "junit:target/surefire-reports/cucumber.xml",
+                "rerun:target/failed.txt"}
+
+
 )
 public class TestRunner {
+
 }
